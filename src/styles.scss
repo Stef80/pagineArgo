@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Set the colors to blue and amber
+//$ag-active: #E91E63; // pink-500 from https://www.materialui.co/colors
+// Import the ag-Grid balham theme
+// @import '~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham';
+
+//$ag-active: #E91E63; // pink-500 from https://www.materialui.co/colors
+// Set the colors to blue and amber
+//$ag-primary-color: rgb(217, 255, 0); // blue-500
+//$ag-accent-color: #FFD740; // amber-A200
+$ag-header-background-color: #224ca7;
+//$ag-header-color: #ffffff;
+
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+
+.myHead.ag-theme-balham .ag-header {
+    background-color: #224ca7;
+    font-weight: bold;
+    color: white;
+    width: max-content;
+    //display: grid;
+    //overflow: hidden;
+    //display: flex;
+
+    //height: 100%;
+    width:100%;
+    //$paginationPageSize:true;
+}

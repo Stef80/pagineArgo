@@ -1,0 +1,216 @@
+<app-menu></app-menu>
+<app-side-bar></app-side-bar>
+<div class="container">
+<h3 id='title'>Dettaglio Cliente</h3>
+<div class="form">
+    <form *ngIf="cliente">
+        <div class='title'>
+            <label for="CodiceCliente"></label> Codice Cliente
+            <input type='text' name='CodiceCliente' id="CodiceCliente" [(ngModel)]="cliente.cdCliente" />
+            <label for="Nazione"></label> Nazione&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type='text' name='Nazione' id="Nazione" [(ngModel)]="cliente.dsNazione" />
+        </div>
+        <br>
+        <div class='title'>
+            <label for="TipoCliente"></label> TipoCliente&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type='text' name='TipoCliente' id="TipoCliente" [(ngModel)]="cliente.cdTpCliente" />
+            Persona &nbsp;&nbsp;
+            <label for="fisica"></label>
+            <input type="radio" name="tipo" id="fisica" value="fisica" >
+            Fisica
+            <label for="giuridica"></label>
+            <input type="radio" name="tipo" id="giuridica" value="giuridica">
+            Giuridica
+        </div>
+        <br>
+        <div class='title'>
+            <label for="Denominazione"></label> Denominazione
+            <br>
+            <input type='text' name='Denominazione' id="Denominazione" [(ngModel)]="cliente.denominazione"/>
+        </div>
+        <br>
+
+            <div class='title'>
+                <label for="Cognome"></label> Cognome
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='text' name='Cognome' id="Cognome" [(ngModel)]="cliente.cognome" />
+                <label for="PartitaIva"> Partita
+                    Iva&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </label>
+                <input type='text' name='PartitaIva' id="PartitaIva" [(ngModel)]="cliente.sPIva" />
+            </div>
+            <br>
+            <div class='title'>
+                <label for="Nome"></label> Nome
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='text' name='Nome' id="Nome" [(ngModel)]="cliente.nome"  />
+                <label for="CodiceFiscale"> Codice Fiscale
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type='text' name='CodiceFiscale' id="CodiceFiscale" [(ngModel)]="cliente.cf"  />
+            </div>
+            <br>
+            <div class='title'>
+                <label for="DatadiNascita"></label> Data di nascita &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='date' name='DatadiNascita' id="DatadiNascita" [(ngModel)]="cliente.dataNascita" />
+                <label for="Sesso"> Sesso
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;</label>
+                <select name='Sesso' id="Sesso">
+                    <option>Maschio</option>
+                    <option>Femmina</option>
+                </select>
+            </div>
+            <br>
+            <div class='title'>
+                <label for="ComunediNascita"></label> Comune di nascita &nbsp;
+                <input type='text' name='ComunediNascita' id="ComunediNascita" [(ngModel)]="cliente.sPIva"  />
+            </div>
+            <br>
+            <div class='title'>
+                <label for="E-Mail"></label> E-mail
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='text' name='E-mail' id="E-mail" [(ngModel)]="cliente.email" />
+                <label for="PEC"></label> PEC
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text'
+                    name='PEC' id="PEC" [(ngModel)]="cliente.emailPec" />
+            </div>
+            <br>
+            <div class='title'>
+                <label for="Telefono"></label> Telefono
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='text' name='Telefono' id="Telefono" [(ngModel)]="cliente.telefono"  />
+                <label for="Fax"></label> Fax
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='text' name='Fax' id="Fax" [(ngModel)]="cliente.fax" />
+            </div>
+            <br>
+            <div class='title'>
+                <label for="Cellulare"></label> Cellulare
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='text' name='Cellulare' id="Cellulare" [(ngModel)]="cliente.cellulare" />
+                <label for="Fasciaorariadicontatto"></label> Fascia oraria di contatto &nbsp;&nbsp;&nbsp;
+                <input type='text' name='Fasciaorariadicontatto' id="Fasciaorariadicontatto" [(ngModel)]="cliente.dsFasciaOrariaCont" />
+            </div>
+
+        <br>
+        <div class='title'>
+            <label for="ResidenzaSede1"></label> Residenza/Sede
+            <br>
+            <input type='text' name='ResidenzaSede1' id="ResidenzaSede1" [(ngModel)]="cliente.indCliDenomUrb"  />
+            <input type='text' name='ResidenzaSede2' id="ResidenzaSede2" [(ngModel)]="cliente.indCliVia" />
+            <input type='text' name='ResidenzaSede3' id="ResidenzaSede3" [(ngModel)]="cliente.indCliCivico" />
+            <input type='text' name='ResidenzaSede4' id="ResidenzaSede4" [(ngModel)]="indirizzo"  />
+
+            <button type="button" id="button1" (click)="show=!show">+ </button>
+            <br>
+
+            <div id="Residenza" *ngIf=show>
+            <label for="Aggiuntivo"></label>
+            <input type='text' value="Aggiuntivo" name='Aggiuntivo' id="Aggiuntivo" [(ngModel)]="cliente.indCliIdLocalita" />
+            <label for="Periodicità">
+            </label>
+            <input type='text' value="Edificio" name='Edificio' id="Edificio" [(ngModel)]="cliente.indCliEdificio" />
+            </div>
+
+        </div>
+
+        <br>
+        <div class='title'>
+            <label for="Agenzia"></label> Agenzia
+            <input type='text' name='Agenzia' id="Agenzia" [(ngModel)]="cliente.dsAgenzia" />
+            <label for="Agente"></label> Agente
+            <input type='text' name='Fax' id="Agente" [(ngModel)]="cliente.dsAgente" />
+        </div>
+        <br>
+       <button type="button" id="button" (click)="show2=!show2">+</button><span class="testo-blu"> &nbsp; Dati Commerciali del
+                Cliente</span>
+            <div id="Fatturazione" *ngIf=show2> Dati di Fatturazione
+                <br>
+                <br>
+                <label for="CanaleInvio"></label> Canale Invio
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='text' name='CanaleInvio' id="CanaleInvio" [(ngModel)]="cliente.cdCanaleInvio"  />
+                <label for="Periodicità">
+                    Periodicità&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </label>
+                <input type='text' name='Periodicità' id="Periodicità" [(ngModel)]="cliente.dsTpFreqFatt"  />
+                <br>
+                <label for="MetodoPagamento"></label> Metodo Pagamento &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='text' name='MetodoPagamento' id="MetodoPagamento" [(ngModel)]="cliente.dsMetodoPagam"  />
+                <label for="TerminePagam"> Termine
+                    pagam.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </label>
+                <input type='text' name='TerminePagam' id="TerminePagam" [(ngModel)]="cliente.cdCalendario" />
+                <div class='DatiBonifico'>Dati Pagamento mediante: Bonifico Bancario </div>
+                <div class='Bancario'>C/C Bancario
+                    <br> <input type='text' name='bancario' id="bancario" [(ngModel)]="cliente.dsCcBanc" />
+                    <br>
+                    <br>
+                    <label for="Iban"></label> IBAN
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type='text' name='Iban' id="Iban" [(ngModel)]="cliente.iban" />
+                    <label for="Periodicità">
+                        <br>
+                        <br>
+                    </label> Codice Bic/Swift &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type='text' name='CodiceBic' id="CodiceBic" [(ngModel)]="cliente.bic"  />
+                    <br>
+                    <br>
+                </div>
+
+
+            <br>
+            Dati Destinatario Fattura
+            <br>
+
+            <div class='title'>
+                <label for="Nominativo"></label> Nominativo
+                <br>
+                <br>
+                <input type='text' name='Nominativo' id="Nominativo" [(ngModel)]="cliente.denominazione" />
+                <br>
+                <br>
+
+                <label for="e-mail"></label> Cognome
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='text' name='e-mail' id="e-mailF" [(ngModel)]="cliente.emailDestFattura"  />
+                <label for="fax1"> Partita
+                    Iva &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;
+                </label>
+                <input type='text' name='fax1' id="fax1" [(ngModel)]="cliente.faxDestFattura"  />
+                <br>
+                <br>
+                <label for="indirizzoFatt1"></label> Indirizzo Fattura
+                <br>
+                <input type='text' name='indirizzoFatt1' id="indirizzoFatt1" [(ngModel)]="cliente.indFatDenomUrb" />
+                <input type='text' name='indirizzoFatt2' id="indirizzoFatt2" [(ngModel)]="cliente.indFatVia" />
+                <input type='text' name='indirizzoFatt3' id="indirizzoFatt3" [(ngModel)]="cliente.indFatCivico" />
+                <input type='text' name='indirizzoFatt4' id="indirizzoFatt4" [(ngModel)]="cliente.indFatLocalita" />
+                <button type="button" id="buttonF" (click)="show3=!show3">+ </button>
+                <br>
+
+                <div id="IndirizzoFattura" *ngIf=show3>
+                <label for="Aggiuntivo"></label>
+                <input type='text' value="Aggiuntivo" name='Aggiuntivo' id="AggiuntivoF" [(ngModel)]="cliente.indFatAggiuntivo"  />
+                <label for="Periodicità">
+                </label>
+                <input type='text' value="Edificio" name='Edificio' id="EdificioF" [(ngModel)]="cliente.indFatEdificio" />
+                </div>
+
+                <br>
+            </div>
+
+
+
+        </div>
+    </form>
+</div>
+<div class='footer'>
+    <button type="button" id="pulsante" [routerLink]="'/ricercaClienti'"> Torna </button>
+</div>
+</div>

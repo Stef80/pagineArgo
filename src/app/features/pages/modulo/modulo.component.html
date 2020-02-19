@@ -1,0 +1,63 @@
+<!--
+    <h1 class="text-center" id="titolo">Argon</h1> 
+-->
+<font face="Lucida Console" color="black">
+    <h1 class="text-center" id="titolo">Argon</h1>
+</font>
+<h3 class="text-left" id="Autenticazione">Selezione di modulo ed azienda</h3>
+<div style="min-height: calc(100vh - 56px);"
+    class=" d-flex m-auto col-sm-8 col-md-6 col-lg-4 justify-content-center flex-column align-items-center">
+    <div class="a">
+        <div class="row">
+            <div class="col"><br>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class=" col-md-10 col-lg-10 col-xl-8 align-self-center ">
+                <form method="post">
+
+                    <div class="form-group">
+                        <p class="primo- offset-position: left">Azienda &nbsp;&nbsp; &nbsp;&nbsp;<select
+                                style="width:310px" type="Login" name="Login" placeholder="" class="form-control"
+                                required ngModel Login>
+                                <option>Altran Italia s.p.a</option>
+                                <option>boooo1</option>
+                                <option>boooo2</option>
+                            </select></p><!-- da aggiustare -->
+
+                        <p class="primo-offset-position: auto">Modulo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select
+                                style="width:310px" type="Login" name="Login" placeholder="" class="form-control"
+                                required ngModel Login>
+                                <option>billing</option>
+                                <option>boooo1</option>
+                                <option>boooo2</option>
+                            </select> </p>
+                    </div>
+                    <br>
+                    <div class=" d-flex w-75 justify-content-center m-auto ">
+                        <div class="text-center ">
+                            <button id="bot" style="width:130px;" type="button" class="btn"
+                                [routerLink]="['/ricercaClienti']">seleziona</button>&nbsp;&nbsp;&nbsp;
+                            <button id="bot" style="width:130px;" type="submit" class="btn">cambia
+                                pwd</button>&nbsp;&nbsp;&nbsp;
+                            <button id="bot" style="width:130px;" type="submit" class="btn"
+                                [routerLink]="['/login']">logout</button>&nbsp;&nbsp;&nbsp;
+                            <!--
+                                <div class="my-2">oppure</div>
+                                
+                                <a [routerLink]="['/register']" class="btn btn-block btn-secondary my-0">REGISTRATI</a><br><br>
+                            -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="bar">
+    <div id="bar2"><a id="bi"><a align="center" id="bia">Benvenuto in Argon:</a><a id="b">Login e Password sono
+                necessarie per l'accesso all'applicativo</a></a></div>
+</div>

@@ -1,0 +1,81 @@
+<!--
+ <button (click)="toggleSideNav()" id="nasc">show</button>
+-->
+
+
+
+<div class="sidenav" id="sideNav">
+  <!-- <button (click)="toggleSideNav()"></button> -->
+  <h1 id="title">ARGON</h1>
+  <h2 class="text-right">Ambiente di TEST</h2>
+  <h3 id="utenza">Benvenuto Utente.nome()</h3>
+  <p id="par">Ultimo accesso: Accesso.data()</p>
+  <br>
+  <p id="par">Modulo: Billing</p>
+  <p id="par">Altran Italia s.p.a.</p>
+  <!--<div id="firstFormGroup" class="form-group" style="width: 100px;" ng-switch-when="!show" style="width: 50px;"></div>
+
+  <div id="firstFormGroup" class="form-group" style="width: 100px;" [ngIf]="show" style="width: 50px;" [ngIfElse]="!show" style="width: 100px;" ></div>-->
+
+
+
+  <div id="firstFormGroup" class="form-group" ng-switch-when="!show">
+    <p></p>
+    <button id="btn" (click)="show = !show"><img id="img" *ngIf="!show" src=<img
+        src="https://img.icons8.com/office/16/000000/plus-math.png"> <img id="img" *ngIf="show"
+        src="https://img.icons8.com/office/16/000000/minus-math.png">
+      <p id="tend">Generale</p>
+    </button>
+    <div *ngIf="show"><br>
+      <div><img id="imgHome" src="https://img.icons8.com/doodle/48/000000/home--v1.png"><a id="tendHome">Home
+          Billing</a>
+        <p></p>
+      </div>
+      <div><img id="imgHome" src="https://img.icons8.com/dusk/64/000000/change.png"><a id="tendHome">Cambia
+          modulo/azienda
+        </a>
+      </div>
+      <p></p>
+
+      <div><img [routerLink]="['/login']" id="imgHome" src="https://img.icons8.com/dusk/64/000000/plug.png"> <a
+          [routerLink]="['/login']" id="tendHome">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="firstFormGroup" class="form-group" ng-switch-when="!show2">
+    <p></p>
+    <button id="btn" (click)="show2 = !show2"><img id="img" *ngIf="!show2" src=<img
+        src="https://img.icons8.com/office/16/000000/plus-math.png"> <img id="img" *ngIf="show2"
+        src="https://img.icons8.com/office/16/000000/minus-math.png">
+      <p id="tend">Accesso Rapido</p>
+    </button>
+    <div *ngIf="show2"><br>
+      <div><img id="imgHome"
+          src="https://img.icons8.com/office/16/000000/lightning-bolt.png"><a id="tendHome">Cliente</a>
+        <p></p>
+      </div>
+      <div><img id="imgHome"
+          src="https://img.icons8.com/office/16/000000/lightning-bolt.png"><a id="tendHome">Documenti
+        </a>
+      </div>
+      <p></p>
+
+      <div><img id="imgHome"
+          src="https://img.icons8.com/office/16/000000/lightning-bolt.png"><a id="tendHome">Lotti</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="firstFormGroup" class="form-group">
+    <button id="btn"><img id="img" src="https://img.icons8.com/office/16/000000/info.png">
+      <p id="tend">Help</p>
+    </button></div>
+
+
+</div>
+
+<!--
+<app-chiamata ></app-chiamata>
+-->
+<div class="main"></div>

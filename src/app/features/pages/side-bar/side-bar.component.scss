@@ -1,0 +1,115 @@
+/* The sidebar menu */
+.sidenav {
+    height: 90%; /* Full-height: remove this if you want "auto" height */
+    width: 300px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 1;
+    background-color: #D1D7E2; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 0%;
+    margin-top: 4%;
+  }
+
+  #utenza{
+    margin-left: 10%;
+  }
+
+  #tend{
+    margin-left: 20px;
+    margin-top: -18px;
+    font-size: 120%;
+    color: #055fb3;
+    white-space: nowrap;
+  }
+
+  #par{
+    margin-left: 12%;
+    margin-top: -6%;
+  }
+
+
+  #title{
+    margin-left: 10%;
+    font-size: 300%;
+    color: rgb(3, 3, 3);
+  }
+
+  .text-right{
+    text-align: end;
+    margin-right: 20%;
+    margin-top: -14%;
+    font-size: 120%;
+    color: rgb(104, 109, 107);
+}
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 140%;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #e7ebea;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160%; /* Same as the width of the sidebar */
+    padding: 0% 10%;
+  }
+  
+ #btn{
+   border-color: rgb(64, 174, 194);
+   border-radius: 5px;
+   height: 20px;
+   width: 25px;
+   margin-left: 30px;
+   outline: none;
+ }
+
+ #img{
+   margin-left: -3.5px;
+   margin-top: -1px;
+ }
+
+ #imgHome{
+   margin-left: 30px;
+   width: 30px;
+   margin-top: -10px;
+ }
+
+ #tendHome{
+   margin-left: 50px;
+   margin-top: -32px;
+   font-size: 100%;
+   color: #000000;
+ }
+
+#firstFormGroup{
+  background:#F1F5FA;
+  border: 1px solid #c6ced8;
+  border-radius: 0px;
+  height: auto;
+  margin: 30px;
+  width: auto;
+  margin-top: -10px;
+}
+
+#nasc{
+  //margin-left: 310px;
+  //margin-top: 100px;
+  //width: 100px;
+  order: 2;
+  transition-delay: 2s
+}
+
+#co{
+  display: flex;
+  flex-direction: row;
+}
