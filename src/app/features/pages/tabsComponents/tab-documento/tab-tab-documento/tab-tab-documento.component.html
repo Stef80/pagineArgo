@@ -1,0 +1,28 @@
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  crossorigin="anonymous"
+/>
+<nav>
+  <div class="nav nav-tabs" id="nav-tab-doc" role="tablist">
+    <a
+      *ngFor="let tabItem of tabItems"
+      (click)="onTabClicked(tabItem)"
+      [class.active]="tabItem.isSelected"
+      class="nav-item nav-link active"
+      id="nav-home-tab"
+      data-toggle="tab"
+      href="javascript:void(0)"
+      role="tab"
+      aria-controls="nav-home"
+      aria-selected="true"
+      >{{ tabItem.text }}</a
+    >
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <ng-template appTabsDocumento></ng-template>
+  </div>
+</div>

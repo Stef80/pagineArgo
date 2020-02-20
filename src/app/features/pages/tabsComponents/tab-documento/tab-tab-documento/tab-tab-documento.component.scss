@@ -3,14 +3,12 @@
   border: 10px solid rgb(207, 224, 230);
   font-size: 12px;
   background-color: rgb(244, 249, 252);
-  margin-left: 120px;
-  padding-top: 3%;
-  width: 100%;
-  min-height: 200px;
+  width: auto;
   font-weight: 700;
+  min-height: 200px;
 }
 .nav {
-  width: 600px;
+  width: 100%;
   height: auto;
   font-weight: 500;
 }
@@ -22,5 +20,5 @@
 }
 
 .nav-tabs {
-  margin-left: 120px;
+  width: 500px;
 }

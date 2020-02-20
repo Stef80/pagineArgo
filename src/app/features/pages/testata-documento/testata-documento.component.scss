@@ -1,0 +1,167 @@
+.tab {
+  border: 10px solid rgb(207, 224, 230);
+  font-size: 12px;
+  background-color: rgb(244, 249, 252);
+  padding: 20px;
+  margin-left: 120px;
+  //   margin-right: 500px;
+  width: 700px;
+}
+
+.page-container {
+  margin-top: 56px;
+  margin-left: 300px;
+  margin-right: 300px;
+  min-width: 500px;
+}
+
+.page-form {
+  margin-top: 80px;
+}
+
+input,
+textarea {
+  background-color: #e1e1e1;
+  width: 180px;
+}
+
+.document1 {
+  width: 10%;
+}
+
+.document2 {
+  width: 55%;
+}
+
+.document3 {
+  width: 20%;
+}
+
+.document4 {
+  width: 100%;
+}
+
+.document5 {
+  width: 45.2%;
+}
+
+.form {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  border: 10px solid rgb(207, 224, 230);
+  font-size: 12px;
+  background-color: rgb(244, 249, 252);
+  padding: 20px;
+  margin-left: 120px;
+  //   margin-right: 500px;
+  width: 750px;
+}
+
+.square {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  margin-bottom: 100px;
+}
+
+#title {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  margin-left: 120px;
+  margin-right: 500px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.footer {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  background-color: 35px solid rgb(207, 224, 230);
+  margin-left: 120px;
+  width: 750px;
+  background-color: rgb(207, 224, 230);
+  padding: 12px;
+}
+
+#pulsante {
+  box-shadow: 3px 4px 0px 0px #899599;
+  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  background-color: #ededed;
+  border-radius: 40px;
+  border: 1px solid #d6bcd6;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  font-family: Arial;
+  font-size: 12px;
+  padding: 2px 45px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #e1e2ed;
+}
+
+#fisica {
+  background-color: rgb(244, 249, 252);
+  width: 5%;
+}
+
+#giuridica {
+  background-color: rgb(244, 249, 252);
+  width: 5%;
+}
+
+#button {
+  color: blue;
+}
+
+.testo-blu {
+  color: blue;
+}
+
+#Denominazione {
+  width: 80%;
+}
+
+.DatiBonifico {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: 35px solid rgb(207, 224, 230);
+  margin-left: 20px;
+  margin-right: 540px;
+  margin-top: 10px;
+  background-color: rgb(207, 224, 230);
+  padding: 8px;
+}
+
+.Bancario {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: 35px solid rgb(207, 224, 230);
+  border: 1px solid black;
+
+  margin-right: 180px;
+
+  background-color: rgb(207, 224, 230);
+  padding: 8px;
+}
+
+#bancario {
+  width: 99%;
+}
+
+.Iban {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: 35px solid rgb(207, 224, 230);
+  border: 1px solid black;
+  margin-right: 180px;
+  background-color: rgb(207, 224, 230);
+  padding: 8px;
+}
+
+#ResidenzaSede {
+  width: 30%;
+  margin-right: 5px;
+}
+#ResidenzaSede1 {
+  width: 30%;
+  margin-right: 5px;
+}
+#ResidenzaSede2 {
+  width: 25%;
+  margin-right: 5px;
+}

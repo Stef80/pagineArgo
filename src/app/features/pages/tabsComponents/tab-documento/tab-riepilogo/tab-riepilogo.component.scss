@@ -1,0 +1,62 @@
+input,
+textarea {
+  width: 180px;
+}
+
+.document1 {
+  width: 10%;
+  margin-right: 10px;
+}
+
+.document2 {
+  width: 90%;
+}
+
+.form {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  border: 10px solid rgb(207, 224, 230);
+  font-size: 12px;
+  margin-right: 100px;
+  background-color: rgb(244, 249, 252);
+}
+
+.form1 {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  border: 10px solid rgb(207, 224, 230);
+  font-size: 12px;
+  background-color: rgb(244, 249, 252);
+  padding: 20px;
+}
+
+#title {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  margin-left: 120px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.footer {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  background-color: 35px solid rgb(207, 224, 230);
+  background-color: rgb(207, 224, 230);
+  padding: 12px;
+}
+
+#pulsante {
+  box-shadow: 3px 4px 0px 0px #899599;
+  background-color: #ededed;
+  border-radius: 40px;
+  border: 1px solid #d6bcd6;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  font-family: Arial;
+  font-size: 12px;
+  padding: 2px 45px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #e1e2ed;
+}
+
+#Sezione {
+  width: 58%;
+}

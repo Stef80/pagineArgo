@@ -10,6 +10,7 @@ import { ChiamataComponent } from './features/pages/chiamata/chiamata.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProvaPageComponent } from './features/pages/prova-page/prova-page.component';
 import { TabComponent } from './features/pages/tab/tab.component';
+import { TestataDocumentoComponent } from './features/pages/testata-documento/testata-documento.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: 'chiamata/:filename', component: ChiamataComponent},
   { path: 'chiamata', component: ChiamataComponent},
   { path : 'prova/:cod_Cliente', component: ProvaPageComponent},
-  { path: 'tab', component: TabComponent}
+  { path: 'tab', component: TestataDocumentoComponent}
 ];
 
 export const routing = RouterModule.forRoot(routes);

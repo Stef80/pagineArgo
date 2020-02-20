@@ -4,19 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  /*
-  template: `
-  <div class="container mt-3">
-    <app-card title="FIRST">
-    bla bla
-    </app-card>
-    <app-card title="FIRST">
-    bla bla
-    </app-card>
-  </div>
-`,
-  styles: []
-  */
+
 })
 export class AppComponent {
   title = 'pagineArgo';
