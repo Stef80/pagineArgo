@@ -7,20 +7,8 @@ textarea {
   width: 10%;
 }
 
-.document2 {
-  width: 55%;
-}
-
 .document3 {
   width: 20%;
-}
-
-.document4 {
-  width: 100%;
-}
-
-.document5 {
-  width: 45.2%;
 }
 
 .form {
@@ -28,6 +16,8 @@ textarea {
   border: 10px solid rgb(207, 224, 230);
   font-size: 12px;
   background-color: rgb(244, 249, 252);
+
+  margin-left: 120px;
   margin-right: 500px;
 }
 
@@ -36,12 +26,13 @@ textarea {
   border: 10px solid rgb(207, 224, 230);
   font-size: 12px;
   background-color: rgb(244, 249, 252);
-  padding-top: 20px;
+  padding: 20px;
 }
 
 #title {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   margin-left: 120px;
+  margin-right: 500px;
   margin-bottom: 10px;
   font-size: 15px;
 }
@@ -69,41 +60,6 @@ textarea {
   padding: 2px 45px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #e1e2ed;
-}
-
-#fisica {
-  background-color: rgb(244, 249, 252);
-  width: 5%;
-}
-
-#giuridica {
-  background-color: rgb(244, 249, 252);
-  width: 5%;
-}
-
-#button {
-  color: blue;
-}
-
-.testo-blu {
-  color: blue;
-}
-
-#Testo {
-  width: 92%;
-}
-#Tipo {
-  background-color: rgb(228, 227, 227);
-}
-.DatiBonifico {
-  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  background-color: 35px solid rgb(207, 224, 230);
-  margin-left: 20px;
-  margin-right: 540px;
-  margin-top: 10px;
-  background-color: rgb(207, 224, 230);
-  padding: 8px;
 }
 
 #Sezione {

@@ -35,6 +35,9 @@ import { TabsDocumentoDirective } from "./features/pages/tabsComponents/tab-docu
 import { TabTabDocumentoComponent } from "./features/pages/tabsComponents/tab-documento/tab-tab-documento/tab-tab-documento.component";
 import { TabDocItemService } from "./features/services/tab-doc-item.service";
 import { TabDocPanesService } from "./features/services/tab-doc-panes.service";
+import { TabCompetenzeFattureComponent } from "./features/pages/tabsComponents/tab-consumo/tab-competenze-fatture/tab-competenze-fatture.component";
+import { TabLettureComponent } from "./features/pages/tabsComponents/tab-consumo/tab-letture/tab-letture.component";
+import { TabMisureComponent } from "./features/pages/tabsComponents/tab-consumo/tab-misure/tab-misure.component";
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { TabDocPanesService } from "./features/services/tab-doc-panes.service";
     TabRiepilogoComponent,
     TabDettaglioComponent,
     TabsDocumentoDirective,
-    TabTabDocumentoComponent
+    TabTabDocumentoComponent,
+    TabCompetenzeFattureComponent,
+    TabLettureComponent,
+    TabMisureComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +88,10 @@ import { TabDocPanesService } from "./features/services/tab-doc-panes.service";
     TabPagamentiComponent,
     TabLogDocComponent,
     TabDettaglioComponent,
-    TabRiepilogoComponent
+    TabRiepilogoComponent,
+    TabCompetenzeFattureComponent,
+    TabLettureComponent,
+    TabMisureComponent
   ],
   providers: [
     TabItemsService,

@@ -28,6 +28,8 @@ textarea {
   border: 10px solid rgb(207, 224, 230);
   font-size: 12px;
   background-color: rgb(244, 249, 252);
+
+  margin-left: 120px;
   margin-right: 500px;
 }
 
@@ -36,12 +38,13 @@ textarea {
   border: 10px solid rgb(207, 224, 230);
   font-size: 12px;
   background-color: rgb(244, 249, 252);
-  padding-top: 20px;
+  padding: 20px;
 }
 
 #title {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   margin-left: 120px;
+  margin-right: 500px;
   margin-bottom: 10px;
   font-size: 15px;
 }
@@ -92,9 +95,7 @@ textarea {
 #Testo {
   width: 92%;
 }
-#Tipo {
-  background-color: rgb(228, 227, 227);
-}
+
 .DatiBonifico {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;

@@ -16,4 +16,12 @@ export class TabItemsService {
       new TabItem("Log documento", false)
     ];
   }
+
+  public getTabConsumoItem(): TabItem[] {
+    return [
+      new TabItem("Competenze Fatture", true),
+      new TabItem("Letture", false),
+      new TabItem("Misure", false)
+    ];
+  }
 }

@@ -7,6 +7,9 @@ import { TabPagamentiComponent } from "../pages/tabsComponents/tab-pagamenti/tab
 import { TabLogDocComponent } from "../pages/tabsComponents/tab-log-doc/tab-log-doc.component";
 import { TabRiepilogoComponent } from "../pages/tabsComponents/tab-documento/tab-riepilogo/tab-riepilogo.component";
 import { TabDettaglioComponent } from "../pages/tabsComponents/tab-documento/tab-dettaglio/tab-dettaglio.component";
+import { TabCompetenzeFattureComponent } from "../pages/tabsComponents/tab-consumo/tab-competenze-fatture/tab-competenze-fatture.component";
+import { TabLettureComponent } from "../pages/tabsComponents/tab-consumo/tab-letture/tab-letture.component";
+import { TabMisureComponent } from "../pages/tabsComponents/tab-consumo/tab-misure/tab-misure.component";
 
 @Injectable({
   providedIn: "root"
@@ -21,6 +24,14 @@ export class TabPanesService {
       new TabPaneItem(TabRigheDiCalcoloComponent),
       new TabPaneItem(TabPagamentiComponent),
       new TabPaneItem(TabLogDocComponent)
+    ];
+  }
+
+  public getTabConsumoPanes(): TabPaneItem[] {
+    return [
+      new TabPaneItem(TabCompetenzeFattureComponent),
+      new TabPaneItem(TabLettureComponent),
+      new TabPaneItem(TabMisureComponent)
     ];
   }
 }
