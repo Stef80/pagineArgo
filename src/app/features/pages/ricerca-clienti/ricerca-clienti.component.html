@@ -1,71 +1,111 @@
 <app-menu></app-menu>
+<app-side-bar></app-side-bar>
+<div class="cont">
+  <h3 class="text-left" id="Autenticazione">Ricerca Clienti</h3>
+  <div class="row">
+    <form method="GET" #f="ngForm" (submit)="cerca(f)">
+      <div class="form-group">
+        Codice Cliente&nbsp;&nbsp;&nbsp;
+        <input
+          id="codCli"
+          style="width:180px"
+          type="text"
+          name="codCli"
+          placeholder=""
+          class="form-control"
+          minlength="4"
+          [(ngModel)]="cliente.codCli"
+        />
 
-<br>
-<br>
-<br>
-<h3 class="text-left" id="Autenticazione">Ricerca Clienti</h3>
-<div style="min-height: calc(100vh - 56px);"
-    class=" d-flex m-auto col-sm-8 col-md-6 col-lg-4 justify-content-center flex-column align-items-center">
+        Tipo Cliente &nbsp;&nbsp;&nbsp;&nbsp;<select
+          style="width:150px"
+          name="tipoCliente"
+          placeholder=""
+          class="form-control"
+        >
+          <option></option>
+          <option>boooo1</option>
+          <option>boooo2</option>
+        </select>
+        <!-- da aggiustare -->
 
-    <div class="a">
-        <div class="row">
-            <div class="col"><br>
+        <p>
+          Denominazione &nbsp;&nbsp;<input
+            style="width:300px"
+            type="text"
+            name="denominazione"
+            placeholder=""
+            class="form-control"
+            minlength="4"
+            [(ngModel)]="cliente.denominazione"
+          />
+        </p>
 
-            </div>
+        <p>
+          Codice Fiscale &nbsp;&nbsp;&nbsp;<input
+            style="width:170px"
+            type="text"
+            name="cF"
+            placeholder=""
+            class="form-control"
+            minlength="4"
+            [(ngModel)]="cliente.cF"
+          />
+          Partita IVA
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+            style="width:170px"
+            type="text"
+            name="pIva"
+            placeholder=""
+            class="form-control"
+            minlength="4"
+            [(ngModel)]="cliente.pIva"
+          />
+        </p>
+        <p>
+          POD/PDR &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<input
+            style="width:170px"
+            type="text"
+            name="pod"
+            placeholder=""
+            class="form-control"
+            minlength="4"
+            [(ngModel)]="cliente.pod"
+          />
+          Matricola Presa &nbsp;&nbsp;<input
+            style="width:280px"
+            type="text"
+            name="mat"
+            placeholder=""
+            class="form-control"
+            maxlength="4px"
+            [(ngModel)]="cliente.mat"
+          />
+        </p>
+      </div>
+      <div class="footer">
+        <div class="text-left ">
+          <button id="bot1" style="width:130px;" type="submit" class="btn">
+            Cerca</button
+          >&nbsp;&nbsp;&nbsp;
+
+          <button
+            id="botr"
+            style="width:130px;"
+            type="button"
+            (click)="ripulisci(f)"
+            class="btn"
+          >
+            Ripulisci</button
+          >&nbsp;&nbsp;&nbsp;
         </div>
-        <div class="row justify-content-center">
-            <div class=" col-md-10 col-lg-10 col-xl-8 align-self-center ">
-                <form method="GET" #f='ngForm' (submit)= "cerca(f)">
-                    <div class="form-group">
-                        
-                        Codice Cliente&nbsp;&nbsp;&nbsp;
-                        <input id="codCli" style="width:180px" type="text" name="codCli" placeholder="" class="form-control" minlength="4"
-                        [(ngModel)]="cliente.codCli">
-
-                        Tipo Cliente &nbsp;&nbsp;&nbsp;&nbsp;<select style="width:150px" name="tipoCliente"
-                            placeholder="" class="form-control" >
-                            <option></option>
-                            <option>boooo1</option>
-                            <option>boooo2</option>
-                        </select>
-                        <!-- da aggiustare -->
-
-                        <p>Denominazione &nbsp;&nbsp;<input style="width:300px" type="text" name="denominazione" placeholder=""
-                                class="form-control" minlength="4" [(ngModel)]="cliente.denominazione">
-                        </p>
-                        
-                        <p>Codice Fiscale &nbsp;&nbsp;&nbsp;<input style="width:170px" type="text" name="cF"
-                                placeholder="" class="form-control" minlength="4" [(ngModel)]="cliente.cF">
-                            Partita IVA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="width:170px"
-                                type="text" name="pIva" placeholder="" class="form-control" minlength="4" [(ngModel)]="cliente.pIva">
-                        </p>
-                        <p>POD/PDR &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<input style="width:170px" type="text" name="pod"
-                                placeholder="" class="form-control" minlength="4" [(ngModel)]="cliente.pod">
-                            Matricola Presa &nbsp;&nbsp;<input style="width:280px" type="text" name="mat" placeholder=""
-                                class="form-control" minlength="4" [(ngModel)]="cliente.mat">
-                        </p>
-                    </div>
-                    <br>
-                    <div class=" d-flex w-75 justify-content-center m-auto ">
-                        <div class="text-left ">
-                            <button id="bot1" style="width:130px;" type="submit"
-                                class="btn">Cerca</button>&nbsp;&nbsp;&nbsp;
-                                
-                            <button id="botr" style="width:130px;" type="button" (click)="ripulisci(f)"
-                                class="btn">Ripulisci</button>&nbsp;&nbsp;&nbsp;
-
-                            <!--
-                                <div class="my-2">oppure</div>
-                                
-                                <a [routerLink]="['/register']" class="btn btn-block btn-secondary my-0">REGISTRATI</a><br><br>
-                            -->
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <app-side-bar></app-side-bar>
-    <app-chiamata *ngIf="show" [body]="this.body"></app-chiamata>
-    <!--<app-chiamata [nomeF]="'data2.json'" *ngIf=""></app-chiamata>-->
+      </div>
+    </form>
+    <app-chiamata
+      *ngIf="show"
+      [body]="this.body"
+      [path]="this.path"
+      [paginationPageSize]="10"
+    ></app-chiamata>
+  </div>
 </div>
