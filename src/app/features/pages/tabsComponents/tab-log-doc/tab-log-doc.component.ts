@@ -1,14 +1,15 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-tab-log-doc",
-  templateUrl: "./tab-log-doc.component.html",
-  styleUrls: ["./tab-log-doc.component.scss"]
+  selector: 'app-tab-log-doc',
+  templateUrl: './tab-log-doc.component.html',
+  styleUrls: ['./tab-log-doc.component.scss']
 })
 export class TabLogDocComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit() {}
+  constructor() { }
 
-  path: string = "http://localhost:8080/testdoc/log/32831";
+  ngOnInit() {
+  }
+
 }
