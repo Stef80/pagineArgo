@@ -34,7 +34,7 @@
         />
 
         <label for="al">
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           al &nbsp;&nbsp;&nbsp;
         </label>
         <input class="document document1" type="text" name="al" id="al" />
@@ -46,3 +46,8 @@
   <button type="button" id="pulsante">Cerca</button> &nbsp;&nbsp;&nbsp;
   <button type="button" id="pulsante">Ripulisci</button>
 </div>
+<app-chiamata
+  [path]="this.path"
+  [lente]="this.lente"
+  [paginationPageSize]="10"
+></app-chiamata>

@@ -14,8 +14,7 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
   private gridColumnApi;
   public modules: Module[] = AllCommunityModules;
   // tslint:disable-next-line:no-input-rename
-  @Input("body") body: HttpParams;
-  @Input() path: string;
+  @Input() path: Object;
   @Input() lente: boolean;
   columnDefs = [];
   rowData: any;
@@ -29,39 +28,39 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
   }
 
   ngOnInit() {
-    console.log("chiamata", this.body);
-    this.getAll(this.body, this.path, this.lente);
+    this.getAll(this.path, this.lente);
   }
 
   ngOnChanges() {
-    this.getAll(this.body, this.path, this.lente);
+    this.getAll(this.path, this.lente);
   }
 
   // tolta da costruttore
 
-  getAll(params, path, lente) {
+  getAll(path, lente) {
     // return this.http.get("http://localhost:8080/cliente/2/" + this.nomeF).subscribe(
-    console.log("parametri", params);
-    return this.http.get(path, { params }).subscribe(risp => {
-      //   console.log("questo è ", risp)
-      const keys = Object.keys(risp[0]);
-      const columnDefs = [];
-      // columnDefs.push({ width: 50, cellRenderer: 'costumCell' });
+    console.log("chiamata", path);
+    //   console.log("questo è ", risp)
+    const keys = Object.keys(path[0]);
+    console.log("chiamata chiavi", keys);
+    const columnDefs = [];
+    // columnDefs.push({ width: 50, cellRenderer: 'costumCell' });
+    if (lente) {
       columnDefs.push({
         width: 50,
-        template: '<img src="assets/images/dettaglio.gif"   >'
+        template: '<img src="assets/images/dettaglio.gif">'
       });
-      for (const k of keys) {
-        columnDefs.push({
-          headerName: k,
-          field: k,
-          resizable: true,
-          flex: 1
-        });
-      }
-      this.columnDefs = columnDefs;
-      this.rowData = risp;
-    });
+    }
+    for (const k of keys) {
+      columnDefs.push({
+        headerName: k,
+        field: k,
+        resizable: true,
+        flex: 1
+      });
+    }
+    this.columnDefs = columnDefs;
+    this.rowData = path;
   }
 
   onGridReady(params) {

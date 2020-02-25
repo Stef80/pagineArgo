@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-tab-log-doc",
@@ -6,9 +7,20 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./tab-log-doc.component.scss"]
 })
 export class TabLogDocComponent implements OnInit {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getLog();
+  }
 
-  path: string = "http://localhost:8080/testdoc/log/32831";
+  path: Object;
+
+  public getLog() {
+    return this.http
+      .get("http://localhost:8080/testdoc/log/")
+      .subscribe(risp => {
+        console.log("get log method", risp);
+        this.path = risp;
+      });
+  }
 }

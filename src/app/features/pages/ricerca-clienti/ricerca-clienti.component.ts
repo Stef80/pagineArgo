@@ -28,14 +28,14 @@ export class RicercaClientiComponent implements OnInit {
 
   show = false;
   body: HttpParams;
-  path: string = "http://localhost:8080/cliente/all1";
+  path: Object;
+  lente: boolean = true;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {}
 
   cerca(form: NgForm) {
     this.show = true;
-
     this.cliente.codCli = form.form.value.codCli;
     this.cliente.cF = form.form.value.cF;
     this.cliente.denominazione = form.form.value.denominazione;
@@ -50,8 +50,13 @@ export class RicercaClientiComponent implements OnInit {
       .set("pIva", this.cliente.pIva)
       .set("mat", this.cliente.mat)
       .set("pod", this.cliente.pod);
-
-    // return this.http.get("http://localhost:8080/cliente/all1", {params: body}).subscribe( risp => console.log(risp));
+    let params = this.body;
+    return this.http
+      .get("http://localhost:8080/cliente/all1", { params })
+      .subscribe(risp => {
+        console.log(risp);
+        this.path = risp;
+      });
     // this.http.get("http://localhost:8080/cliente/all1/" + body).subscribe(
     //  risp => console.log('risposta:', JSON.parse('' + risp).data))
   }

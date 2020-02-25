@@ -1,8 +1,15 @@
-<p>tab-pagamenti works!</p>
-<div>
-  <p>totali</p>
-  <label for="tot_doc"></label>
-  <input id="tot_doc" name="tot_doc" />
-  <label for="tot_rate"></label>
-  <input id="tot_rate" name="tot_rate" />
+<div class="container">
+  <app-chiamata
+    [path]="this.path1"
+    [lente]="false"
+    [paginationPageSize]="1"
+  ></app-chiamata>
+  <div>
+    <p>totali</p>
+    <label for="tot_doc">totale documenti</label>
+    <input id="tot_doc" name="tot_doc" [(ngModel)]="totPagamento" />
+    <br />
+    <label for="tot_rate">totale rate</label>
+    <input id="tot_rate" name="tot_rate" [(ngModel)]="totRate" />
+  </div>
 </div>
