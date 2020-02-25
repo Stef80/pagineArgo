@@ -10,20 +10,35 @@
             <div class="title">
               <label for="IdDocumento"></label> ID Documento
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input type="text" name="IdDocumento" id="IdDocumento" />
+              <input
+                type="text"
+                name="IdDocumento"
+                id="IdDocumento"
+                [(ngModel)]="doc.idDocumento"
+              />
             </div>
             <br />
 
             <div class="title">
               <label for="Entità Fatt."></label> Entità Fatt.
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input type="text" name="Entità Fatt." id="Entità Fatt." />
+              <input
+                type="text"
+                name="Entità Fatt."
+                id="Entità Fatt."
+                [(ngModel)]="doc.cdEntitaFatt"
+              />
               <label for="N. Fattura">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N. Fattura
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;
               </label>
-              <input type="text" name="N. Fattura" id="N. Fattura" />
+              <input
+                type="text"
+                name="N. Fattura"
+                id="N. Fattura"
+                [(ngModel)]="doc.fatturaDef"
+              />
             </div>
             <br />
             <div class="title">
@@ -34,6 +49,7 @@
                 type="text"
                 name="DataCompetenza"
                 id="DataCompetenza"
+                [(ngModel)]="doc.dtCompDal"
               />
 
               <label for="DataCompetenza2"></label> al &nbsp;
@@ -42,6 +58,7 @@
                 type="text"
                 name="DataCompetenza2"
                 id="DataCompetenza2"
+                [(ngModel)]="doc.dtCompAl"
               />
 
               <label for="Data scadenza"></label>
@@ -52,13 +69,19 @@
                 type="date"
                 name="Data scadenza"
                 id="Data scadenza"
+                [(ngModel)]="doc.dtScadenza"
               />
             </div>
             <br />
             <div class="title">
               <label for="Data Emissione"></label> Data emissione
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input type="text" name="Data emissione" id="Data emissione" />
+              <input
+                type="text"
+                name="Data emissione"
+                id="Data emissione"
+                [(ngModel)]="doc.dtEmissione"
+              />
               <label for="Metodo pagamento">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Metodo
                 pagamento&nbsp;&nbsp;
@@ -67,6 +90,7 @@
                 type="text"
                 name="Metodo pagamento"
                 id="Metodo pagamento"
+                [(ngModel)]="doc.dsMetodoPagam"
               />
             </div>
 
@@ -90,6 +114,7 @@
                 type="text"
                 name="TipoDocumento"
                 id="TipoDocumento"
+                [(ngModel)]="doc.dsTpDocumento"
               />
 
               <label for="Stato"></label> Stato
@@ -99,6 +124,7 @@
                 type="text"
                 name="Stato"
                 id="Stato"
+                [(ngModel)]="doc.dsStato"
               />
 
               <label for="Stato FE"></label>
@@ -108,6 +134,7 @@
                 type="text"
                 name="Stato FE"
                 id="Stato FE"
+                [(ngModel)]="doc.dsStatoSdi"
               />
             </div>
             <br />
@@ -120,6 +147,7 @@
                 type="text"
                 name="Importo fattura"
                 id="Importo fattura"
+                [(ngModel)]="doc.importo"
               />
               <label for="Da pagare">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -131,6 +159,7 @@
                 type="text"
                 name="Da pagare"
                 id="Da pagare"
+                [(ngModel)]="doc.daPagare"
               />
             </div>
             <br />
@@ -142,6 +171,7 @@
                 type="text"
                 name="A storno di"
                 id="A storno di"
+                [(ngModel)]="doc.fatturaDefStorno"
               />
 
               <label for="Data calcolo"></label> Data calcolo
@@ -151,6 +181,7 @@
                 type="text"
                 name="Data calcolo"
                 id="Data calcolo"
+                [(ngModel)]="doc.dtCalcolo"
               />
 
               <label for="N. Lotto"></label>
@@ -160,6 +191,7 @@
                 type="text"
                 name="N. Lotto"
                 id="N. Lotto"
+                [(ngModel)]="doc.idLotto"
               />
             </div>
             <br />
@@ -172,6 +204,7 @@
                 type="text"
                 name="Cod intestatario"
                 id="Cod Intestatario"
+                [(ngModel)]="doc.cdIntestatario"
               />
             </div>
             <br />
@@ -185,16 +218,18 @@
                 type="text"
                 name="Denominazione Intestatario"
                 id="Denominazione Intestatario"
+                [(ngModel)]="doc.dsIntestatario"
               />
               <br />
               <hr />
-              <label for="Denominazion"></label> Denominazione
+              <label for="Denominazion"></label> Destinazione
               <br />
               <input
                 class="document document4"
                 type="text"
-                name="Denominazion"
-                id="Denominazion"
+                name="Destinazione"
+                id="Destinazione"
+                [(ngModel)]="doc.destinatario"
               />
             </div>
             <br />
@@ -207,14 +242,26 @@
                 type="text"
                 name="ResidenzaSede"
                 id="ResidenzaSede"
+                [(ngModel)]="doc.indirizzoDest"
               />
-              <input type="text" name="ResidenzaSede1" id="ResidenzaSede1" />
-              <input type="text" name="ResidenzaSede2" id="ResidenzaSede2" />
+              <input
+                type="text"
+                name="ResidenzaSede1"
+                id="ResidenzaSede1"
+                [(ngModel)]="doc.capDest"
+              />
+              <input
+                type="text"
+                name="ResidenzaSede2"
+                id="ResidenzaSede2"
+                [(ngModel)]="doc.localitaDest"
+              />
               <input
                 class="document document1"
                 type="text"
                 name="ResidenzaSede3"
                 id="ResidenzaSede3"
+                [(ngModel)]="doc.provDest"
               />
             </div>
           </form>
