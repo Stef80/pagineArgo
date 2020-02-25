@@ -1,4 +1,10 @@
-import { Component, OnInit, HostBinding } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  HostBinding,
+  OnChanges,
+  ɵɵNgOnChangesFeature
+} from "@angular/core";
 import { TabPaneItem } from "../tab/tab-pane-item";
 import { TabItem } from "../tab/tab-item";
 import { TabPanesService } from "../../services/tab-panes.service";
@@ -25,10 +31,10 @@ export class TestataDocumentoComponent implements OnInit {
   ngOnInit() {
     this.tabItems = this.tabItemService.getTabItem();
     this.tabPaneItems = this.tabPaneService.getTabPanes();
-    this.getDoc("32828");
+    this.getDoc(32831);
   }
 
-  public getDoc(idDoc: string) {
+  public getDoc(idDoc: number) {
     return this.http
       .get<Documento>("http://localhost:8080/testdoc/" + idDoc)
       .subscribe(risp => {
