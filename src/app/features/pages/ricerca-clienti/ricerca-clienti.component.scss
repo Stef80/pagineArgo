@@ -12,66 +12,47 @@
 }
 */
 .form-group {
-  background: #eff3f8;
-  border: 10px solid #d2dae4;
-  border-bottom: 1px;
-  border-radius: 0px;
-  height: 150px;
-  width: 80%;
-  padding-left: 5px;
-  padding-top: 8px;
+    background: #eff3f8;
+    border: 1px solid #eff3f8;
+    border-radius: 0px;
+    height: 150px;
+    margin: 20px auto 0;
+    width: 700px;
+    margin-top: -10px;
 }
 
-#titolo {
-  font-size: 80px;
+#titolo{
+        font-size: 80px;
+        text-align: center;
+        //text-face: "Arial";
+    }
 
-  //text-face: "Arial";
+    #Autenticazione{
+        text-indent: 400px;
+        text-align: justify;
+    }
+
+.a {
+
+    .text-center{
+        //text-indent: 10px;
+        text-align: center;
+    }
+text-indent: 10px;
+    
+    background: #d2dae4;
+    border: 1px solid #a2acb8;
+    border-radius: 0px;
+    height: 215px;
+    margin: 20px auto 0;
+    //margin-top: -20px;
+    width: 720px;
 }
 
-#Autenticazione {
-  text-align: justify;
-  margin-top: 15px;
-  margin-left: 20px;
-}
-
-// .a {
-//   .text-center {
-//     //text-indent: 10px;
-//     text-align: center;
-//   }
-//   text-indent: 10px;
-
-//   background: #d2dae4;
-//   border: 1px solid #a2acb8;
-//   border-radius: 0px;
-//   height: 215px;
-//   margin: 20px auto 0;
-//   //margin-top: -20px;
-//   width: 720px;
-// }
-
-botton,
-button {
-  size: 0;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-  background: #e6edf0;
-}
-
-.cont {
-  margin-top: 56px;
-  margin-left: 300px;
-  margin-right: 300px;
-  min-width: 500px;
-  padding: 50px;
-}
-
-.footer {
-  background: #d2dae4;
-  border: 10px solid #d2dae4;
-  border-radius: 0px;
-  height: 40px;
-  width: 80%;
-  padding-left: 5px;
+botton, button{
+    size:0;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    background: #e6edf0;
 }

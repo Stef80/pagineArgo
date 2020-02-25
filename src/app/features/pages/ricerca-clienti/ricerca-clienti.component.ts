@@ -1,37 +1,30 @@
-import {
-  Component,
-  OnInit,
-  Output,
-  EventEmitter,
-  ViewChild
-} from "@angular/core";
-import { NgForm } from "@angular/forms";
-import { HttpClient, HttpParams } from "@angular/common/http";
+import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Component({
-  selector: "app-ricerca-clienti",
-  templateUrl: "./ricerca-clienti.component.html",
-  styleUrls: ["./ricerca-clienti.component.scss"]
+  selector: 'app-ricerca-clienti',
+  templateUrl: './ricerca-clienti.component.html',
+  styleUrls: ['./ricerca-clienti.component.scss']
 })
 export class RicercaClientiComponent implements OnInit {
-  // @ViewChild('f', { static: false })
-  // mytemplateForm: NgForm;
 
-  cliente = {
-    codCli: "",
-    denominazione: "",
-    pIva: "",
-    cF: "",
-    mat: "",
-    pod: ""
-  };
+ // @ViewChild('f', { static: false })
+ // mytemplateForm: NgForm;
+
+  cliente = { codCli: '', denominazione: '', pIva: '', cF: '', mat: '', pod: '' };
+
+
 
   show = false;
   body: HttpParams;
-  path: string = "http://localhost:8080/cliente/all1";
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
 
-  ngOnInit() {}
+  }
+
+  ngOnInit() {
+
+  }
 
   cerca(form: NgForm) {
     this.show = true;
@@ -44,12 +37,12 @@ export class RicercaClientiComponent implements OnInit {
     this.cliente.pod = form.form.value.pod;
 
     this.body = new HttpParams()
-      .set("codCli", this.cliente.codCli)
-      .set("cF", this.cliente.cF)
-      .set("denominazione", this.cliente.denominazione)
-      .set("pIva", this.cliente.pIva)
-      .set("mat", this.cliente.mat)
-      .set("pod", this.cliente.pod);
+      .set('codCli', this.cliente.codCli)
+      .set('cF', this.cliente.cF)
+      .set('denominazione', this.cliente.denominazione)
+      .set('pIva', this.cliente.pIva)
+      .set('mat', this.cliente.mat)
+      .set('pod', this.cliente.pod);
 
     // return this.http.get("http://localhost:8080/cliente/all1", {params: body}).subscribe( risp => console.log(risp));
     // this.http.get("http://localhost:8080/cliente/all1/" + body).subscribe(
@@ -57,11 +50,13 @@ export class RicercaClientiComponent implements OnInit {
   }
 
   ripulisci(form: NgForm) {
-    this.cliente.codCli = "";
-    this.cliente.cF = "";
-    this.cliente.denominazione = "";
-    this.cliente.pIva = "";
-    this.cliente.mat = "";
-    this.cliente.pod = "";
+
+    this.cliente.codCli = '';
+    this.cliente.cF = '';
+    this.cliente.denominazione = '';
+    this.cliente.pIva = '';
+    this.cliente.mat = '';
+    this.cliente.pod = '';
   }
+
 }
