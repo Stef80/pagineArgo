@@ -1,66 +1,51 @@
-
-    <h5>&nbsp;&nbsp;&nbsp;Ricerca Righe di Calcolo</h5>
-    <div class="form">
-      <form>
+<h5>&nbsp;&nbsp;&nbsp;Ricerca Righe di Calcolo</h5>
+<div class="form">
+  <form>
     <div class="form1">
-     
-      <label for="Codice Punto"></label> Codice Punto &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input class="document4 " type="text" name="Codice Punto" id="Codice Punto" />
-        <label for="Mese">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          Mese &nbsp;&nbsp;&nbsp;&nbsp;
-        </label>
-        <input class="document document4" type="text" name="Mese" id="Mese" />
-    
-      <br />
-      <br />
-    
-        <label for="Testo">
-          &nbsp;Testo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </label>
-        <input
-          class="document document2"
-          type="text"
-          name="Testo"
-          id="Testo"
-        />
- 
-      <br />
-      <br />
-        <label for="Quantity">
-          Quantità &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input
-            class="document "
-            type="text"
-            name="Quantity"
-            id="Quantity"
-          />
-        </label>
-        <label for="Price">
+      <label for="Codice Punto"></label> Codice Punto
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        class="document4 "
+        type="text"
+        name="Codice Punto"
+        id="Codice Punto"
+      />
+      <label for="Mese">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          Prezzo &nbsp;
-        </label>
-        <input
-          class="document "
-          type="text"
-          name="Price"
-          id="Price"
-        />
-        <br />
-        <br />
-        <label for="Importo">
-          Importo
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input
-            class="document"
-            type="text"
-            name="Importo"
-            id="Importo"
-          />
-        </label>
-    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Mese &nbsp;&nbsp;&nbsp;&nbsp;
+      </label>
+      <input class="document document4" type="text" name="Mese" id="Mese" />
+
+      <br />
+      <br />
+
+      <label for="Testo">
+        &nbsp;Testo
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </label>
+      <input class="document document2" type="text" name="Testo" id="Testo" />
+
+      <br />
+      <br />
+      <label for="Quantity">
+        Quantità
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="document " type="text" name="Quantity" id="Quantity" />
+      </label>
+      <label for="Price">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Prezzo &nbsp;
+      </label>
+      <input class="document " type="text" name="Price" id="Price" />
+      <br />
+      <br />
+      <label for="Importo">
+        Importo
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="document" type="text" name="Importo" id="Importo" />
+      </label>
     </div>
   </form>
 </div>
@@ -68,3 +53,4 @@
   <button type="button" id="pulsante">Cerca</button> &nbsp;&nbsp;&nbsp;
   <button type="button" id="pulsante">Ripulisci</button>
 </div>
+<app-chiamata [path]="this.path" [paginationPageSize]="10"></app-chiamata>

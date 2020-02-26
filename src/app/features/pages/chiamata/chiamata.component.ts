@@ -39,9 +39,11 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
 
   getAll(path, lente) {
     // return this.http.get("http://localhost:8080/cliente/2/" + this.nomeF).subscribe(
+    let keys = [];
     console.log("chiamata", path);
-    //   console.log("questo è ", risp)
-    const keys = Object.keys(path[0]);
+    if (path != null) {
+      keys = Object.keys(path[0]);
+    }
     console.log("chiamata chiavi", keys);
     const columnDefs = [];
     // columnDefs.push({ width: 50, cellRenderer: 'costumCell' });
@@ -55,7 +57,7 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
       columnDefs.push({
         headerName: k,
         field: k,
-        resizable: true,
+        resizeble: true,
         flex: 1
       });
     }
@@ -65,7 +67,14 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
 
   onGridReady(params) {
     this.gridApi = params.api;
+    console.log("gridApi ", this.gridApi);
     this.gridColumnApi = params.columnApi;
+    var allColumnIds = [];
+    this.gridColumnApi.getAllColumns().forEach(function(column) {
+      allColumnIds.push(column.colId);
+    });
+
+    // this.gridColumnApi.autoSizeColumns(true);
   }
 
   onRowClicked(event: any): void {
