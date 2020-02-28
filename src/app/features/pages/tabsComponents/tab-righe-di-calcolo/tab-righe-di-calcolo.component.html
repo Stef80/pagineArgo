@@ -1,56 +1,169 @@
-<h5>&nbsp;&nbsp;&nbsp;Ricerca Righe di Calcolo</h5>
+<h5>Ricerca Righe di Calcolo</h5>
 <div class="form">
   <form>
     <div class="form1">
-      <label for="Codice Punto"></label> Codice Punto
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="Codice Punto" id="codice-punto-label"></label> Codice Punto
+
       <input
         class="document4 "
         type="text"
         name="Codice Punto"
-        id="Codice Punto"
+        id="codice-punto"
       />
-      <label for="Mese">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Mese &nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="Mese" id="mese">
+        Mese
       </label>
-      <input class="document document4" type="text" name="Mese" id="Mese" />
+      <input class="document" type="text" name="Mese" id="Mese" />
 
       <br />
-      <br />
-
-      <label for="Testo">
-        &nbsp;Testo
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="Testo" id="testo">
+        Testo
       </label>
-      <input class="document document2" type="text" name="Testo" id="Testo" />
-
+      <input class="document" type="text" name="Testo" id="Testo" />
       <br />
-      <br />
-      <label for="Quantity">
+      <label for="Quantity" id="quantity-label">
         Quantità
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input class="document " type="text" name="Quantity" id="Quantity" />
       </label>
-      <label for="Price">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Prezzo &nbsp;
+      <input class="document " type="text" name="Quantity" id="Quantity" />
+
+      <label for="Price" id="price-label">
+        Prezzo
       </label>
       <input class="document " type="text" name="Price" id="Price" />
       <br />
-      <br />
-      <label for="Importo">
-        Importo
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input class="document" type="text" name="Importo" id="Importo" />
-      </label>
+      <label for="Import" id="Import-label"> Importo</label>
+      <input class="document" type="text" name="Import" id="Import" />
+      <div class="footer">
+        <button type="button" id="pulsante">Cerca</button>
+        <button type="button" id="ripulisci">Ripulisci</button>
+      </div>
     </div>
   </form>
 </div>
-<div class="footer">
-  <button type="button" id="pulsante">Cerca</button> &nbsp;&nbsp;&nbsp;
-  <button type="button" id="pulsante">Ripulisci</button>
+
+<div>
+  <app-chiamata [path]="this.path" [paginationPageSize]="10"> </app-chiamata>
+
+  <br />
+  <div *ngIf="false">
+    <button type="button">Nuovo</button>
+    <button type="button">Modifica</button>
+    <button type="button">Elimina</button>
+  </div>
+  <h5>Gestione Riga Fattura</h5>
+  <div class="form">
+    <form>
+      <div class="form1">
+        Riga del quadro di
+        <input type="radio" name="dettaglio" id="dettaglio" value="dettaglio" />
+        <label for="dettaglio">Dettaglio</label>
+        <input type="radio" name="sintesi" id="sintesi" value="sintesi" />
+        <label for="sintesi">Sintesi</label>
+        <br />
+        <label for="Punto" id="puntoLabel"></label> Punto;
+        <select name="Punto" id="Punto">
+          <option>Punto1</option>
+          <option>Punto2</option>
+          <option>Punto3</option>
+        </select>
+        <label for="Periodo"> Periodo </label>
+        <select name="Periodo" id="Periodo">
+          <option>1 gennaio 2017</option>
+        </select>
+        <label for="Componente">
+          Componente
+        </label>
+        <select name="Componente" id="Componente">
+          <option>Componente1</option>
+          <option>Componente2</option>
+        </select>
+        <br />
+        <br />
+        <div class="title">
+          <label for="Quantita"> Quantità </label>
+          <input
+            class="document quantita"
+            type="text"
+            name="Quantita"
+            id="Quantita"
+          />
+          ​
+          <label for="UDM" id="udm_qta">
+            UDM qta
+          </label>
+          <input
+            style="background-color: rgb(236, 232, 232)"
+            class="document udm"
+            type="text"
+            name="UDM"
+            id="UDM"
+          />
+        </div>
+        <br />
+        <br />
+        <div class="title">
+          <label for="Prezzo"> Prezzo </label>
+          <input
+            class="document prezzo"
+            type="text"
+            name="Prezzo"
+            id="Prezzo"
+          />
+          ​
+          <label for="UDM prz" id="udm_prz">
+            UDM prz
+          </label>
+          <input
+            style="background-color: rgb(236, 232, 232)"
+            class="document udm"
+            type="text"
+            name="UDM prz"
+            id="UDM prz"
+          />
+          <label for="Importo">
+            Importo
+          </label>
+          <input
+            class="document Importo"
+            type="text"
+            name="Importo"
+            id="Importo"
+          />
+          ​
+          <label for="UDM imp" id="udm_imp">
+            UDM imp
+          </label>
+          <input
+            style="background-color: rgb(236, 232, 232)"
+            class="document udm"
+            type="text"
+            name="UDM imp"
+            id="UDM imp"
+          />
+        </div>
+        <br />
+        <label for="IVA"> IVA </label>
+        <select name="IVA" id="IVA">
+          <option>Iva1</option>
+          <option>Iva2</option>
+        </select>
+        <br />
+        <div class="title">
+          <label for="Fattura" id="fattura-label">
+            Forza testo in fattura con
+          </label>
+          <input
+            class="document fattura"
+            type="text"
+            name="Fattura"
+            id="Fattura"
+          />
+        </div>
+        <div class="footer">
+          <button type="button" id="pulsante">Salva</button>
+          <button type="button" id="pulsante">Annulla</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
-<app-chiamata [path]="this.path" [paginationPageSize]="10"></app-chiamata>

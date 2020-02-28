@@ -16,12 +16,8 @@ export class TabRigheDiCalcoloComponent implements OnInit {
   }
 
   public getRighe() {
-    this.http.get("http://localhost:8080/testdoc/righe").subscribe(
-      ris => {
-        console.log("righe ", ris);
-        this.path = ris;
-      },
-      err => console.error(err)
-    );
+    this.http
+      .get("http://localhost:8080/testdoc/righe")
+      .subscribe(ris => (this.path = ris));
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Pagamento } from "src/app/features/models/pagamenti";
+import { ThrowStmt } from "@angular/compiler";
 
 @Component({
   selector: "app-tab-pagamenti",
@@ -10,7 +11,7 @@ import { Pagamento } from "src/app/features/models/pagamenti";
 export class TabPagamentiComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
-  ris: Pagamento;
+  ris: Object;
 
   path = {
     dataPagamento: "",
@@ -19,7 +20,7 @@ export class TabPagamentiComponent implements OnInit {
     N_Postale: "",
     n_Mav: ""
   };
-  path1: Object;
+  path1 = [];
   totPagamento: string;
   totRate: string;
 
@@ -29,20 +30,19 @@ export class TabPagamentiComponent implements OnInit {
 
   getpagamento() {
     this.http
-      .get<Pagamento>("http://localhost:8080/testdoc/pagamenti")
+      .get<Pagamento[]>("http://localhost:8080/testdoc/pagamenti")
       .subscribe(risp => {
-        this.ris = risp;
-        console.log("risposta pagamenti", this.ris);
-        console.log(this.ris.dtPagamento);
-        this.path.dataPagamento = this.ris.dtPagamento;
-        this.path.importo = this.ris.importo;
-        this.path.UDM = this.ris.cdUdmImp;
-        this.path.N_Postale = this.ris.bollPostale;
-        this.path.n_Mav = this.ris.mav;
-        this.path1 = this.path;
-        this.totPagamento = this.ris.totDocumento;
-        this.totRate = this.ris.totRate;
+        this.path.dataPagamento = risp[0].dtPagamento;
+        this.path.importo = risp[0].importo;
+        this.path.UDM = risp[0].cdUdmImp;
+        this.path.N_Postale = risp[0].bollPostale;
+        this.path.n_Mav = risp[0].mav;
+        this.totPagamento = risp[0].totDocumento;
+        this.totRate = risp[0].totRate;
+        this.path1.push(this.path);
+        let keys = Object.keys(this.path);
         console.log("variabile path", this.path);
+        console.log("chiavi in pagamento", keys);
       });
   }
 }

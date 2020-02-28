@@ -14,7 +14,7 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
   private gridColumnApi;
   public modules: Module[] = AllCommunityModules;
   // tslint:disable-next-line:no-input-rename
-  @Input() path: Object;
+  @Input() path: any;
   @Input() lente: boolean;
   columnDefs = [];
   rowData: any;
@@ -39,11 +39,13 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
 
   getAll(path, lente) {
     // return this.http.get("http://localhost:8080/cliente/2/" + this.nomeF).subscribe(
+
     let keys = [];
     console.log("chiamata", path);
-    if (path != null) {
+    if (path.length != null) {
       keys = Object.keys(path[0]);
     }
+
     console.log("chiamata chiavi", keys);
     const columnDefs = [];
     // columnDefs.push({ width: 50, cellRenderer: 'costumCell' });
@@ -57,8 +59,7 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
       columnDefs.push({
         headerName: k,
         field: k,
-        resizeble: true,
-        flex: 1
+        resizable: true
       });
     }
     this.columnDefs = columnDefs;
@@ -82,7 +83,7 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
     for (const element in event.colDef) {
       if (element === "template") {
         const codCli = event.data.cod_cliente;
-        console.log(codCli);
+
         this.router.navigate(["/prova/" + codCli]);
       }
     }
