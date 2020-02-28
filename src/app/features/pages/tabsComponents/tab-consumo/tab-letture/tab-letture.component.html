@@ -1,6 +1,6 @@
 <div class="form">
   <form>
-    <h3>&nbsp;&nbsp;&nbsp;Ricerca Letture</h3>
+    <h3>Ricerca Letture</h3>
     <div class="form1">
       <div class="title">
         <label for="Codice Punto">
@@ -13,26 +13,26 @@
           id="Codice Punto"
         />
 
-        <label for="DataLettura">
-          Data Lettura dal &nbsp;
-        </label>
+        <label for="DataLettura" id="data-lettura-label">
+          Data Lettura dal</label
+        >
         <input
-          class="document document3"
+          class="document document1"
           type="text"
           name="DataLettura"
           id="DataLettura"
         />
 
-        <label for="al">
-          &nbsp;&nbsp;&nbsp;al
+        <label for="al" id="al-label">
+          al
         </label>
-        <input class="document document3" type="text" name="al" id="al" />
+        <input class="document document1" type="text" name="al" id="al" />
       </div>
       <br />
 
       <div class="title">
         <label for="Periodo dal">
-          Periodo dal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Periodo dal
         </label>
         <input
           class="document document1"
@@ -41,19 +41,19 @@
           id="Periodo dal"
         />
 
-        <label for="al">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          al &nbsp;&nbsp;&nbsp;
+        <label for="al" id="al-label">
+          al
         </label>
         <input class="document document1" type="text" name="al" id="al" />
+      </div>
+      <div class="footer">
+        <button type="button" id="pulsante">Cerca</button>
+        <button type="button" id="pulsante">Ripulisci</button>
       </div>
     </div>
   </form>
 </div>
-<div class="footer">
-  <button type="button" id="pulsante">Cerca</button> &nbsp;&nbsp;&nbsp;
-  <button type="button" id="pulsante">Ripulisci</button>
-</div>
+
 <app-chiamata
   [path]="this.path"
   [lente]="false"

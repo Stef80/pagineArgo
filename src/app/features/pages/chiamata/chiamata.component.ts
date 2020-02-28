@@ -59,7 +59,8 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
       columnDefs.push({
         headerName: k,
         field: k,
-        resizable: true
+        resizable: true,
+        flex: 1
       });
     }
     this.columnDefs = columnDefs;
@@ -75,7 +76,7 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
       allColumnIds.push(column.colId);
     });
 
-    // this.gridColumnApi.autoSizeColumns(true);
+    this.gridColumnApi.autoSizeColumns(true);
   }
 
   onRowClicked(event: any): void {

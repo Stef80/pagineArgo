@@ -8,14 +8,10 @@ textarea {
   margin-right: 10px;
 }
 
-.document2 {
-  width: 90%;
-}
-
 .form {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;
-  margin-right: 100px;
+  // margin-right: 100px;
   background-color: rgb(244, 249, 252);
 }
 
@@ -26,7 +22,6 @@ textarea {
   background-color: rgb(244, 249, 252);
   padding: 20px;
   padding-bottom: 0px;
-  width: max-content;
 }
 
 .footer {
@@ -36,6 +31,7 @@ textarea {
   padding: 12px;
   margin-left: -20px;
   margin-right: -20px;
+  margin-top: 10px;
 }
 
 #pulsante {
@@ -57,4 +53,18 @@ textarea {
 
 #Sezione {
   width: 35%;
+}
+label {
+  margin-right: 5px;
+  width: 80px;
+}
+#Grandezza {
+  height: 25px;
+  margin-right: 0px;
+}
+#grandezza-label {
+  margin-left: 10px;
+}
+.content {
+  margin-top: 10px;
 }

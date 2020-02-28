@@ -26,6 +26,8 @@ textarea {
   font-size: 12px;
   background-color: rgb(244, 249, 252);
   padding: 20px;
+  padding-bottom: 0px;
+  width: max-content;
 }
 
 .footer {
@@ -33,9 +35,10 @@ textarea {
   background-color: 35px solid #d2dae4;
   background-color: #d2dae4;
   padding: 12px;
-  margin-right: 100px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 10px;
 }
-
 #pulsante {
   box-shadow: 3px 4px 0px 0px #899599;
   background-color: #ededed;
@@ -53,4 +56,12 @@ textarea {
 
 #Sezione {
   width: 35%;
+}
+label {
+  margin-right: 15px;
+  width: 80px;
+}
+.Sezione {
+  height: 25px;
+  margin-right: 10px;
 }

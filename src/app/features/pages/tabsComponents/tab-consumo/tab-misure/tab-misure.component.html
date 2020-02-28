@@ -1,8 +1,8 @@
 <div class="form">
   <form>
-    <h3>Ricerca Misure</h3>
+    <h5>Ricerca Misure</h5>
     <div class="form1">
-      <div class="title">
+      <div>
         <label for="Codice Punto">
           Codice Punto
         </label>
@@ -12,7 +12,7 @@
           name="Codice Punto"
           id="Codice Punto"
         />
-        <label for="Grandezza"></label> Grandezza
+        <label for="Grandezza" id="grandezza-label"> Grandezza</label>
         <select name="Grandezza" id="Grandezza" class="document3">
           <option>Coefficiente C per la correzione delle letture gas</option>
           <option>Coefficiente correttore letture gas</option>
@@ -20,9 +20,7 @@
           <option>Consumo annuo progressivo di gas naturale</option>
         </select>
       </div>
-      <br />
-
-      <div class="title">
+      <div class="content">
         <label for="Periodo dal">
           Periodo dal
         </label>
@@ -50,5 +48,4 @@
   [path]="this.path"
   [lente]="this.lente"
   [paginationPageSize]="10"
-  [ngStyle]="{ width: '3000px' }"
 ></app-chiamata>

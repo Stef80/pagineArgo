@@ -1,10 +1,10 @@
-<h5>&nbsp;&nbsp;&nbsp;Ricerca Righe Dettaglio</h5>
+<h5>Ricerca Righe Dettaglio</h5>
 <div class="form">
   <form>
     <div class="form1">
       <div class="title">
         <label for="Codice Punto">
-          Codice Punto &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Codice Punto
         </label>
         <input
           class="document document1"
@@ -12,40 +12,26 @@
           name="Codice Punto"
           id="Codice Punto"
         />
-        ​
         <label for="Mese">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          Mese &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Mese
         </label>
         <input class="document document1" type="text" name="Mese" id="Mese" />
       </div>
-
-      ​ ​
-      <label for="Testo"></label>Testo
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="Testo">Testo</label>
       <input type="text" name="Testo" id="Testo" width="40" />
       <br />
       <div class="title">
-        <label for="Sezione"></label>
-        Sezione&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;
+        <label for="Sezione">Sezione </label>
+
         <select name="Sezione" id="Sezione" class="Sezione">
           <option>Allegati al documento</option>
           <option
             >Allegati inseriti prima della prima pagina del documento</option
           >
           <option>Informazioni relative Area Web</option>
-          ​
         </select>
-        ​
         <label for="Quantita">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          Quantità &nbsp;&nbsp;&nbsp;
+          Quantità
         </label>
         <input
           class="document document1"
@@ -57,8 +43,6 @@
       <div class="title">
         <label for="Prezzo">
           Prezzo
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;
         </label>
         <input
           class="document document1"
@@ -68,12 +52,7 @@
         />
         ​
         <label for="Importo">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          Importo &nbsp;&nbsp;&nbsp;&nbsp;
+          Importo
         </label>
         <input
           class="document document1"
@@ -83,12 +62,12 @@
         />
       </div>
       ​
+      <div class="footer">
+        <button type="button" id="pulsante">Cerca</button>
+        <button type="button" id="pulsante">Ripulisci</button>
+      </div>
     </div>
   </form>
-</div>
-<div class="footer">
-  <button type="button" id="pulsante">Cerca</button> &nbsp;&nbsp;&nbsp;
-  <button type="button" id="pulsante">Ripulisci</button>
 </div>
 <app-chiamata
   [path]="this.path"
