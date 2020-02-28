@@ -42,7 +42,12 @@
 </div>
 
 <div>
-  <app-chiamata [path]="this.path" [paginationPageSize]="10"> </app-chiamata>
+  <app-chiamata
+    [path]="this.path"
+    [paginationPageSize]="10"
+    [ngStyle]="{ width: '1000px', 'background-color': 'blue' }"
+  >
+  </app-chiamata>
 
   <br />
   <div *ngIf="false">

@@ -1,11 +1,10 @@
-
-    <h3>&nbsp;&nbsp;&nbsp;Ricerca Competenze</h3>
-    <div class="form">
-      <form>
+<h3>Ricerca Competenze</h3>
+<div class="form">
+  <form>
     <div class="form1">
       <div class="title">
         <label for="Codice Punto">
-          Codice Punto &nbsp;&nbsp;&nbsp;&nbsp;
+          Codice Punto
         </label>
         <input
           class="document document3"
@@ -15,10 +14,7 @@
         />
 
         <label for="Mese">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          POD/PDR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          POD/PDR
         </label>
         <input class="document document3" type="text" name="Mese" id="Mese" />
       </div>
@@ -26,7 +22,7 @@
 
       <div class="title">
         <label for="Periodo dal">
-          Periodo dal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Periodo dal
         </label>
         <input
           class="document document1"
@@ -35,17 +31,21 @@
           id="Periodo dal"
         />
 
-        <label for="al">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; al &nbsp;&nbsp;&nbsp;
+        <label for="al" id="al-label">
+          al
         </label>
         <input class="document document1" type="text" name="al" id="al" />
+      </div>
+      <div class="footer">
+        <button type="button" id="pulsante">Cerca</button>
+        <button type="button" id="pulsante">Ripulisci</button>
       </div>
     </div>
   </form>
 </div>
-<div class="footer">
-  <button type="button" id="pulsante">Cerca</button> &nbsp;&nbsp;&nbsp;
-  <button type="button" id="pulsante">Ripulisci</button>
-</div>
-<app-chiamata [path]="this.path"[lente]="false"[paginationPageSize]="10"></app-chiamata>
+
+<app-chiamata
+  [path]="this.path"
+  [lente]="false"
+  [paginationPageSize]="10"
+></app-chiamata>

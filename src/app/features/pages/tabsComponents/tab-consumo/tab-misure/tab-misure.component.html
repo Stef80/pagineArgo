@@ -1,10 +1,10 @@
 <div class="form">
   <form>
-    <h3>&nbsp;&nbsp;&nbsp;Ricerca Misure</h3>
+    <h3>Ricerca Misure</h3>
     <div class="form1">
       <div class="title">
         <label for="Codice Punto">
-          Codice Punto &nbsp;&nbsp;&nbsp;&nbsp;
+          Codice Punto
         </label>
         <input
           class="document document3"
@@ -12,7 +12,7 @@
           name="Codice Punto"
           id="Codice Punto"
         />
-        <label for="Grandezza"></label> Grandezza &nbsp;&nbsp;
+        <label for="Grandezza"></label> Grandezza
         <select name="Grandezza" id="Grandezza" class="document3">
           <option>Coefficiente C per la correzione delle letture gas</option>
           <option>Coefficiente correttore letture gas</option>
@@ -24,7 +24,7 @@
 
       <div class="title">
         <label for="Periodo dal">
-          Periodo dal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Periodo dal
         </label>
         <input
           class="document document1"
@@ -34,20 +34,21 @@
         />
 
         <label for="al">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          al &nbsp;&nbsp;&nbsp;
+          al
         </label>
         <input class="document document1" type="text" name="al" id="al" />
+      </div>
+      <div class="footer">
+        <button type="button" id="pulsante">Cerca</button>
+        <button type="button" id="pulsante">Ripulisci</button>
       </div>
     </div>
   </form>
 </div>
-<div class="footer">
-  <button type="button" id="pulsante">Cerca</button> &nbsp;&nbsp;&nbsp;
-  <button type="button" id="pulsante">Ripulisci</button>
-</div>
+
 <app-chiamata
   [path]="this.path"
   [lente]="this.lente"
   [paginationPageSize]="10"
+  [ngStyle]="{ width: '3000px' }"
 ></app-chiamata>

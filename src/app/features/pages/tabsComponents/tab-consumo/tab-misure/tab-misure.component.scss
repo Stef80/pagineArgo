@@ -14,7 +14,6 @@ textarea {
 
 .form {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-
   font-size: 12px;
   margin-right: 100px;
   background-color: rgb(244, 249, 252);
@@ -22,22 +21,26 @@ textarea {
 
 .form1 {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-  border: 10px solid rgb(207, 224, 230);
+  border: 10px solid #d2dae4;
   font-size: 12px;
   background-color: rgb(244, 249, 252);
   padding: 20px;
+  padding-bottom: 0px;
+  width: max-content;
 }
 
 .footer {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-  background-color: 35px solid rgb(207, 224, 230);
-  background-color: rgb(207, 224, 230);
+  background-color: 35px solid #d2dae4;
+  background-color: #d2dae4;
   padding: 12px;
-  margin-right: 100px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 #pulsante {
   box-shadow: 3px 4px 0px 0px #899599;
+  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
   background-color: #ededed;
   border-radius: 40px;
   border: 1px solid #d6bcd6;
@@ -49,6 +52,7 @@ textarea {
   padding: 2px 45px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #e1e2ed;
+  margin-right: 15px;
 }
 
 #Sezione {
