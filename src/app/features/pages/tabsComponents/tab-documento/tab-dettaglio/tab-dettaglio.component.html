@@ -1,43 +1,46 @@
 <h5>Ricerca Righe Dettaglio</h5>
 <div class="form">
-  <form>
+  <form method="GET" #f="ngForm" (submit)="cerca(f)">
     <div class="form1">
       <div class="title">
-        <label for="Codice Punto">
+        <label for="codice_punto">
           Codice Punto
         </label>
         <input
-          class="document document1"
+          class="document1"
           type="text"
-          name="Codice Punto"
-          id="Codice Punto"
+          name="codice_punto"
+          id="codice
+        Punto"
+          ngModel
         />
-        <label for="Mese">
+        <label for="mese" id="mese-label">
           Mese
         </label>
-        <input class="document document1" type="text" name="Mese" id="Mese" />
+        <input class="document" type="text" name="mese" id="mese" ngModel />
       </div>
       <label for="Testo">Testo</label>
-      <input type="text" name="Testo" id="Testo" width="40" />
+      <input type="text" name="testo" id="testo" ngModel />
       <br />
       <div class="title">
         <label for="Sezione">Sezione </label>
 
-        <select name="Sezione" id="Sezione" class="Sezione">
+        <select name="sezione" id="sezione" class="sezione">
           <option>Allegati al documento</option>
           <option
             >Allegati inseriti prima della prima pagina del documento</option
           >
           <option>Informazioni relative Area Web</option>
         </select>
-        <label for="Quantita">
+        <label for="quantita" id="quantita-label">
           Quantità
         </label>
         <input
-          class="document document1"
+          class="document"
           type="text"
-          name="Quantita"
-          id="Quantita"
+          name="quantita"
+          id="quantita"
+          ngModel
         />
       </div>
       <div class="title">
@@ -47,23 +50,24 @@
         <input
           class="document document1"
           type="text"
-          name="Prezzo"
-          id="Prezzo"
+          name="prezzo"
+          id="prezzo"
+          ngModel
         />
         ​
-        <label for="Importo">
+        <label for="Importo" id="import-label">
           Importo
         </label>
         <input
-          class="document document1"
+          class="document"
           type="text"
-          name="Importo"
-          id="Importo"
+          name="importo"
+          id="importo"
+          ngModel
         />
       </div>
-      ​
       <div class="footer">
-        <button type="button" id="pulsante">Cerca</button>
+        <button type="submit" id="pulsante">Cerca</button>
         <button type="button" id="pulsante">Ripulisci</button>
       </div>
     </div>

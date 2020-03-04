@@ -50,125 +50,132 @@
   </app-chiamata>
 
   <br />
-  <div *ngIf="false">
-    <button type="button">Nuovo</button>
-    <button type="button">Modifica</button>
-    <button type="button">Elimina</button>
+  <div *ngIf="open_window">
+    <button type="button" id="pulsante" (click)="open()">Nuovo</button>
+    <button type="button" id="pulsante">Modifica</button>
+    <button type="button" id="pulsante">Elimina</button>
   </div>
-  <h5>Gestione Riga Fattura</h5>
-  <div class="form">
-    <form>
-      <div class="form1">
-        Riga del quadro di
-        <input type="radio" name="dettaglio" id="dettaglio" value="dettaglio" />
-        <label for="dettaglio">Dettaglio</label>
-        <input type="radio" name="sintesi" id="sintesi" value="sintesi" />
-        <label for="sintesi">Sintesi</label>
-        <br />
-        <label for="Punto" id="puntoLabel"></label> Punto;
-        <select name="Punto" id="Punto">
-          <option>Punto1</option>
-          <option>Punto2</option>
-          <option>Punto3</option>
-        </select>
-        <label for="Periodo"> Periodo </label>
-        <select name="Periodo" id="Periodo">
-          <option>1 gennaio 2017</option>
-        </select>
-        <label for="Componente">
-          Componente
-        </label>
-        <select name="Componente" id="Componente">
-          <option>Componente1</option>
-          <option>Componente2</option>
-        </select>
-        <br />
-        <br />
-        <div class="title">
-          <label for="Quantita"> Quantità </label>
+  <div *ngIf="!open_window">
+    <h5>Gestione Riga Fattura</h5>
+    <div class="form">
+      <form>
+        <div class="form1">
+          Riga del quadro di
           <input
-            class="document quantita"
-            type="text"
-            name="Quantita"
-            id="Quantita"
+            type="radio"
+            name="dettaglio"
+            id="dettaglio"
+            value="dettaglio"
           />
-          ​
-          <label for="UDM" id="udm_qta">
-            UDM qta
+          <label for="dettaglio">Dettaglio</label>
+          <input type="radio" name="sintesi" id="sintesi" value="sintesi" />
+          <label for="sintesi">Sintesi</label>
+          <br />
+          <label for="Punto" id="puntoLabel"></label> Punto;
+          <select name="Punto" id="Punto">
+            <option>Punto1</option>
+            <option>Punto2</option>
+            <option>Punto3</option>
+          </select>
+          <label for="Periodo"> Periodo </label>
+          <select name="Periodo" id="Periodo">
+            <option>1 gennaio 2017</option>
+          </select>
+          <label for="Componente">
+            Componente
           </label>
-          <input
-            style="background-color: rgb(236, 232, 232)"
-            class="document udm"
-            type="text"
-            name="UDM"
-            id="UDM"
-          />
+          <select name="Componente" id="Componente">
+            <option>Componente1</option>
+            <option>Componente2</option>
+          </select>
+          <br />
+          <br />
+          <div class="title">
+            <label for="Quantita"> Quantità </label>
+            <input
+              class="document quantita"
+              type="text"
+              name="Quantita"
+              id="Quantita"
+            />
+            ​
+            <label for="UDM" id="udm_qta">
+              UDM qta
+            </label>
+            <input
+              style="background-color: rgb(236, 232, 232)"
+              class="document udm"
+              type="text"
+              name="UDM"
+              id="UDM"
+            />
+          </div>
+          <br />
+          <br />
+          <div class="title">
+            <label for="Prezzo"> Prezzo </label>
+            <input
+              class="document prezzo"
+              type="text"
+              name="Prezzo"
+              id="Prezzo"
+            />
+            ​
+            <label for="UDM prz" id="udm_prz">
+              UDM prz
+            </label>
+            <input
+              style="background-color: rgb(236, 232, 232)"
+              class="document udm"
+              type="text"
+              name="UDM prz"
+              id="UDM prz"
+            />
+            <label for="Importo" id="importo-label">
+              Importo
+            </label>
+            <input
+              class="document Importo"
+              type="text"
+              name="Importo"
+              id="Importo"
+            />
+            ​
+            <label for="UDM imp" id="udm_imp">
+              UDM imp
+            </label>
+            <input
+              style="background-color: rgb(236, 232, 232)"
+              class="document udm"
+              type="text"
+              name="UDM imp"
+              id="UDM imp"
+            />
+          </div>
+          <br />
+          <label for="IVA"> IVA </label>
+          <select name="IVA" id="IVA">
+            <option>Iva1</option>
+            <option>Iva2</option>
+          </select>
+          <br />
+          <div class="title">
+            <label for="Fattura" id="fattura-label">
+              Forza testo in fattura con
+            </label>
+            <input
+              class="document fattura"
+              type="text"
+              name="Fattura"
+              id="Fattura"
+            />
+          </div>
+          <div class="footer">
+            <button type="button" id="pulsante" (click)="open()">Salva</button>
+            <button type="button" id="pulsante">Annulla</button>
+          </div>
         </div>
-        <br />
-        <br />
-        <div class="title">
-          <label for="Prezzo"> Prezzo </label>
-          <input
-            class="document prezzo"
-            type="text"
-            name="Prezzo"
-            id="Prezzo"
-          />
-          ​
-          <label for="UDM prz" id="udm_prz">
-            UDM prz
-          </label>
-          <input
-            style="background-color: rgb(236, 232, 232)"
-            class="document udm"
-            type="text"
-            name="UDM prz"
-            id="UDM prz"
-          />
-          <label for="Importo">
-            Importo
-          </label>
-          <input
-            class="document Importo"
-            type="text"
-            name="Importo"
-            id="Importo"
-          />
-          ​
-          <label for="UDM imp" id="udm_imp">
-            UDM imp
-          </label>
-          <input
-            style="background-color: rgb(236, 232, 232)"
-            class="document udm"
-            type="text"
-            name="UDM imp"
-            id="UDM imp"
-          />
-        </div>
-        <br />
-        <label for="IVA"> IVA </label>
-        <select name="IVA" id="IVA">
-          <option>Iva1</option>
-          <option>Iva2</option>
-        </select>
-        <br />
-        <div class="title">
-          <label for="Fattura" id="fattura-label">
-            Forza testo in fattura con
-          </label>
-          <input
-            class="document fattura"
-            type="text"
-            name="Fattura"
-            id="Fattura"
-          />
-        </div>
-        <div class="footer">
-          <button type="button" id="pulsante">Salva</button>
-          <button type="button" id="pulsante">Annulla</button>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </div>

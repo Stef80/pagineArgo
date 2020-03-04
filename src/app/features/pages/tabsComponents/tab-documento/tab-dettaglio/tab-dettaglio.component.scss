@@ -4,19 +4,35 @@ textarea {
 }
 
 .document1 {
-  width: 10%;
+  width: 20%;
   margin-right: 10px;
 }
 
-.document2 {
-  width: 90%;
+.document {
+  width: 10%;
+  margin-right: 20px;
+}
+
+#mese-label {
+  margin-left: 280px;
+}
+
+#quantita-label {
+  margin-left: 15%;
+}
+#import-label {
+  margin-left: 43%;
+}
+.title {
+  margin-bottom: 10px;
+}
+#testo {
+  width: 85%;
+  margin-bottom: 10px;
 }
 
 .form {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-
-  font-size: 12px;
-  margin-right: 100px;
   background-color: rgb(244, 249, 252);
 }
 
@@ -41,6 +57,7 @@ textarea {
 }
 #pulsante {
   box-shadow: 3px 4px 0px 0px #899599;
+  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
   background-color: #ededed;
   border-radius: 40px;
   border: 1px solid #d6bcd6;
@@ -52,6 +69,7 @@ textarea {
   padding: 2px 45px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #e1e2ed;
+  margin-left: 20px;
 }
 
 #Sezione {

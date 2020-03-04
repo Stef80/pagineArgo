@@ -12,25 +12,8 @@ export class SideBarComponent implements OnInit {
 
   ngOnInit() {
   }
+  show4: boolean = false;
 
-  //nomeFi: string='';
-
-  show: boolean = true;
-
-  show2: boolean = true;
-
-  show3: boolean = true;
-
-  //show4: boolean = true;
-
-  nomeFile: string='';
-
-  toggleSideNav(){
-    document.getElementById('sideBar').classList.toggle('active');
+ 
   }
 
-  ret(){
-    return this.nomeFile;
-  }
-
-}

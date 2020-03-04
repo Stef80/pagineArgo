@@ -55,6 +55,7 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
         template: '<img src="assets/images/dettaglio.gif">'
       });
     }
+    let i = 0;
     for (const k of keys) {
       columnDefs.push({
         headerName: k,
@@ -62,14 +63,15 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
         resizable: true,
         flex: 1
       });
+      i++;
     }
     this.columnDefs = columnDefs;
-    this.rowData = path;
+    if (Object.values(path) != null) this.rowData = path;
   }
 
   onGridReady(params) {
     this.gridApi = params.api;
-    console.log("gridApi ", this.gridApi);
+
     this.gridColumnApi = params.columnApi;
     var allColumnIds = [];
     this.gridColumnApi.getAllColumns().forEach(function(column) {
@@ -84,7 +86,6 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
     for (const element in event.colDef) {
       if (element === "template") {
         const codCli = event.data.cod_cliente;
-
         this.router.navigate(["/prova/" + codCli]);
       }
     }

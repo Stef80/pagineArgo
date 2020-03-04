@@ -8,6 +8,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class TabRigheDiCalcoloComponent implements OnInit {
   path: Object;
+  open_window: boolean = true;
 
   constructor(private http: HttpClient) {}
 
@@ -19,5 +20,9 @@ export class TabRigheDiCalcoloComponent implements OnInit {
     this.http
       .get("http://localhost:8080/testdoc/righe")
       .subscribe(ris => (this.path = ris));
+  }
+
+  open() {
+    this.open_window = !this.open_window;
   }
 }

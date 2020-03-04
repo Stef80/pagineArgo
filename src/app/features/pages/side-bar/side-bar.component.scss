@@ -14,14 +14,15 @@
 
   #utenza{
     margin-left: 10%;
+    font-size: 110%;
+    font-weight: bold;
+  
   }
 
-  #tend{
-    margin-left: 20px;
-    margin-top: -18px;
-    font-size: 120%;
-    color: #055fb3;
-    white-space: nowrap;
+  #accesso{
+    margin-left: 10%;
+    font-size: 110%;
+  
   }
 
   #par{
@@ -44,72 +45,11 @@
     color: rgb(104, 109, 107);
 }
   
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 140%;
-    color: #818181;
-    display: block;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #e7ebea;
-  }
-  
-  /* Style page content */
-  .main {
-    margin-left: 160%; /* Same as the width of the sidebar */
-    padding: 0% 10%;
-  }
-  
- #btn{
-   border-color: rgb(64, 174, 194);
-   border-radius: 5px;
-   height: 20px;
-   width: 25px;
-   margin-left: 30px;
-   outline: none;
- }
-
- #img{
-   margin-left: -3.5px;
-   margin-top: -1px;
- }
-
- #imgHome{
-   margin-left: 30px;
-   width: 30px;
-   margin-top: -10px;
- }
-
- #tendHome{
-   margin-left: 50px;
-   margin-top: -32px;
-   font-size: 100%;
-   color: #000000;
- }
-
-#firstFormGroup{
-  background:#F1F5FA;
-  border: 1px solid #c6ced8;
-  border-radius: 0px;
-  height: auto;
-  margin: 30px;
-  width: auto;
-  margin-top: -10px;
+.container {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  background-color: rgb(244, 249, 252);
+  padding: 10px;
+  max-width: 85%;
+ 
 }
 
-#nasc{
-  //margin-left: 310px;
-  //margin-top: 100px;
-  //width: 100px;
-  order: 2;
-  transition-delay: 2s
-}
-
-#co{
-  display: flex;
-  flex-direction: row;
-}
