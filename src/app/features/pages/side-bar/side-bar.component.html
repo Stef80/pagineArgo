@@ -12,13 +12,64 @@
   <br />
   <p id="par">Modulo: Billing</p>
   <p id="par">Azienda: Altran Italia s.p.a.</p>
-  
+
   <div class="container">
-    <button type="button" id="button" (click)="show4=!show4">+ </button> Generali
- 
-    <div id="Billing" *ngIf=show4> Billing
-  
-    
+    <span>
+      <img (click)="show4=!show4" *ngIf="!show4" src="https://img.icons8.com/office/16/000000/plus-math.png">
+      <img id="img" (click)="show4=!show4" *ngIf="show4" src="https://img.icons8.com/office/16/000000/minus-math.png">
+      Generali </span>
+
+    <div *ngIf="show4"><br>
+      <div><img id="imgHome" src="https://img.icons8.com/doodle/48/000000/home--v1.png"><a id="tendHome">Home
+          Billing</a>
+
+        <p></p>
+      </div>
+      <div><img id="imgHome" src="https://img.icons8.com/dusk/64/000000/change.png"><a id="tendHome">Cambia
+          modulo/azienda
+        </a>
+      </div>
+      <p></p>
+
+      <div><img [routerLink]="['/login']" id="imgHome" src="https://img.icons8.com/dusk/64/000000/plug.png"> <a
+          [routerLink]="['/login']" id="tendHome">Logout</a>
+      </div>
     </div>
-  
   </div>
+  <br>
+  <br>
+
+  <div class="container1">
+    <span>
+      <img (click)="show3=!show3" *ngIf="!show3" src="https://img.icons8.com/office/16/000000/plus-math.png">
+      <img id="img" (click)="show3=!show3" *ngIf="show3" src="https://img.icons8.com/office/16/000000/minus-math.png">
+      Accesso Rapido </span>
+
+    <div *ngIf="show3"><br>
+      <div><img id="imgHome" src="https://img.icons8.com/office/16/000000/lightning-bolt.png"><a
+          id="tendHome">Cliente</a>
+
+        <p></p>
+      </div>
+      <div><img id="imgHome" src="https://img.icons8.com/office/16/000000/lightning-bolt.png"><a id="tendHome">Documenti
+        </a>
+      </div>
+      <p></p>
+
+      <div><img id="imgHome" src="https://img.icons8.com/office/16/000000/lightning-bolt.png"><a id="tendHome">Lotti
+        </a>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container2">
+
+    <div><img id="imgHome" src="https://img.icons8.com/office/16/000000/info.png"><a id="tendHome">Help</a>
+
+    </div>
+
+  </div>
+
+</div>
