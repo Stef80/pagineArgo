@@ -1,15 +1,23 @@
 <div class="container">
+  <h5>Pagamenti</h5>
   <app-chiamata
+    [ngStyle]="{ width: '200%' }"
+    *ngIf="conferma_chiamata"
     [(path)]="path1"
-    [lente]="false"
+    [check]="true"
     [paginationPageSize]="1"
   ></app-chiamata>
   <div>
     <p>totali</p>
     <label for="tot_doc">totale documenti</label>
-    <input id="tot_doc" name="tot_doc" [(ngModel)]="totPagamento" />
+    <input
+      class="text"
+      id="tot_doc"
+      name="tot_doc"
+      [(ngModel)]="totPagamento"
+    />
     <br />
     <label for="tot_rate">totale rate</label>
-    <input id="tot_rate" name="tot_rate" [(ngModel)]="totRate" />
+    <input class="text" id="tot_rate" name="tot_rate" [(ngModel)]="totRate" />
   </div>
 </div>

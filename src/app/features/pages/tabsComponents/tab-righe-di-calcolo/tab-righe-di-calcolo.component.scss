@@ -6,16 +6,16 @@ textarea {
 #codice-punto-label {
   width: min-content;
 }
-#codice-punto {
+#codice_punto {
   margin-left: 10px;
 }
-#mese {
+#mese-label {
   margin-left: 200px;
 }
 #price-label {
   margin-left: 280px;
 }
-#Testo {
+#testo {
   width: 86%;
   margin-left: 20px;
   margin-top: 8px;
@@ -29,10 +29,15 @@ textarea {
   margin-left: 10px;
 }
 
-#Quantity,
-#Price,
-#Mese,
-#Import {
+#mese {
+  width: 19%;
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+#quantita,
+#price,
+#import {
   width: 100px;
   margin-left: 20px;
   margin-bottom: 8px;
@@ -83,7 +88,7 @@ button {
   margin-right: 15px;
 }
 
-#Sezione {
+#sezione {
   width: 35%;
 }
 h5 {
@@ -100,7 +105,7 @@ h5 {
   margin-right: 10px;
 }
 
-#Punto {
+#punto {
   margin-left: 110px;
   height: 25px;
   margin-right: 10px;
@@ -110,37 +115,37 @@ h5 {
   width: min-content;
 }
 
-#Periodo {
+#periodo {
   margin-left: 10px;
   height: 25px;
   margin-right: 10px;
 }
 
-#Componente {
+#componente {
   margin-left: 10px;
   width: 30em;
   height: 25px;
   margin-right: 10px;
 }
-#Quantita {
+#quantity {
   margin-left: 80px;
   height: 25px;
   margin-right: 10px;
   width: 6em;
 }
 
-#Prezzo {
+#prezzo {
   margin-left: 80px;
   height: 25px;
   margin-right: 10px;
   width: 6em;
 }
-#Importo {
+#importo {
   width: 6em;
   margin-right: 200px;
 }
 
-#Fattura {
+#fattura {
   width: 60%;
   margin-top: 10px;
 }
@@ -166,4 +171,27 @@ label {
 
 .udm {
   width: 60px;
+}
+#nuovo,
+#modifica,
+#elimina {
+  box-shadow: 3px 4px 0px 0px #899599;
+  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  background-color: #ededed;
+  border-radius: 40px;
+  border: 1px solid #d6bcd6;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  font-family: Arial;
+  font-size: 12px;
+  padding: 2px 45px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #e1e2ed;
+  margin-right: 15px;
+  margin-bottom: 40px;
+  margin-top: -10px;
+}
+#nuovo {
+  margin-left: 15px;
 }

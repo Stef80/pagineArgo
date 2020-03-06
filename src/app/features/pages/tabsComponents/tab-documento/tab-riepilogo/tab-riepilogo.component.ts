@@ -13,6 +13,7 @@ export class TabRiepilogoComponent implements OnInit {
   lente: boolean = false;
   body: HttpParams;
   riepilogo_obj: Riepilogo = new Riepilogo();
+  conferma_chiamata: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -22,12 +23,13 @@ export class TabRiepilogoComponent implements OnInit {
 
   public getRiepilogo() {
     this.http.get("http://localhost:8080/testdoc/riepilogo").subscribe(risp => {
-      console.log(risp);
       this.path = risp;
+      this.conferma_chiamata = true;
     });
   }
 
   cerca(form: NgForm) {
+    this.conferma_chiamata = false;
     console.log("cerca riepilogo", form.form.value);
     console.log("riepilogo_obj", this.riepilogo_obj);
     this.riepilogo_obj.sTestoGriglia = form.form.value.testo;
@@ -45,8 +47,8 @@ export class TabRiepilogoComponent implements OnInit {
         params: this.body
       })
       .subscribe(r => {
-        console.log("cerca riepilogo", r);
         this.path = r;
+        this.conferma_chiamata = true;
       });
   }
 }

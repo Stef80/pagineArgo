@@ -52,6 +52,7 @@
   </form>
 </div>
 <app-chiamata
+  *ngIf="conferma_chiamata"
   [path]="this.path"
   [lente]="lente"
   [paginationPageSize]="10"

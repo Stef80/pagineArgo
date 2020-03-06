@@ -1,43 +1,57 @@
 <h5>Ricerca Competenze</h5>
 <div class="form">
-  <form>
+  <form method="GET" #f="ngForm" (submit)="cerca(f)">
     <div class="form1">
       <div class="title">
-        <label for="Codice Punto">
-          Codice Punto
+        <label for="codice_punto">
+          codice_punto
         </label>
         <input
           class="document document3"
           type="text"
-          name="Codice Punto"
-          id="Codice Punto"
+          name="codice_punto"
+          id="codice_punto"
+          ngModel
         />
 
-        <label for="Mese">
+        <label for="podPdr">
           POD/PDR
         </label>
-        <input class="document document3" type="text" name="Mese" id="Mese" />
+        <input
+          class="document document3"
+          type="text"
+          name="podPdr"
+          id="podPdr"
+          ngModel
+        />
       </div>
       <br />
 
       <div class="title">
-        <label for="Periodo dal">
-          Periodo dal
+        <label for="periodo_dal">
+          periodo_dal
         </label>
         <input
           class="document document1"
-          type="text"
-          name="Periodo dal"
-          id="Periodo dal"
+          type="date"
+          name="periodo_dal"
+          id="periodo_dal"
+          ngModel
         />
 
         <label for="al" id="al-label">
           al
         </label>
-        <input class="document document1" type="text" name="al" id="al" />
+        <input
+          class="document document1"
+          type="date"
+          name="al"
+          id="al"
+          ngModel
+        />
       </div>
       <div class="footer">
-        <button type="button" id="pulsante">Cerca</button>
+        <button type="submit" id="pulsante">Cerca</button>
         <button type="button" id="pulsante">Ripulisci</button>
       </div>
     </div>
@@ -45,6 +59,7 @@
 </div>
 
 <app-chiamata
+  *ngIf="conferma_chiamata"
   [path]="this.path"
   [lente]="false"
   [paginationPageSize]="10"

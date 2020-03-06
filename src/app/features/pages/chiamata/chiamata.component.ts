@@ -10,12 +10,13 @@ import { Router } from "@angular/router";
   styleUrls: ["./chiamata.component.scss"]
 })
 export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
-  private gridApi;
-  private gridColumnApi;
+  gridApi;
+  gridColumnApi;
   public modules: Module[] = AllCommunityModules;
   // tslint:disable-next-line:no-input-rename
   @Input() path: any;
   @Input() lente: boolean;
+  @Input() check: boolean;
   columnDefs = [];
   rowData: any;
   rowSelection;
@@ -28,25 +29,18 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
   }
 
   ngOnInit() {
-    this.getAll(this.path, this.lente);
+    this.getAll(this.path, this.lente, this.check);
   }
 
   ngOnChanges() {
-    this.getAll(this.path, this.lente);
+    this.getAll(this.path, this.lente, this.check);
   }
 
-  // tolta da costruttore
-
-  getAll(path, lente) {
-    // return this.http.get("http://localhost:8080/cliente/2/" + this.nomeF).subscribe(
-
+  getAll(path, lente, check) {
     let keys = [];
-    console.log("chiamata", path);
     if (path.length != null) {
       keys = Object.keys(path[0]);
     }
-
-    console.log("chiamata chiavi", keys);
     const columnDefs = [];
     // columnDefs.push({ width: 50, cellRenderer: 'costumCell' });
     if (lente) {
@@ -55,15 +49,19 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
         template: '<img src="assets/images/dettaglio.gif">'
       });
     }
-    let i = 0;
+    if (check) {
+      columnDefs.push({
+        width: 50,
+        checkboxSelection: true
+      });
+    }
+
     for (const k of keys) {
       columnDefs.push({
         headerName: k,
         field: k,
-        resizable: true,
-        flex: 1
+        resizable: true
       });
-      i++;
     }
     this.columnDefs = columnDefs;
     if (Object.values(path) != null) this.rowData = path;
@@ -71,14 +69,15 @@ export class ChiamataComponent implements OnInit, OnChanges, GridOptions {
 
   onGridReady(params) {
     this.gridApi = params.api;
-
     this.gridColumnApi = params.columnApi;
+    console.log("columnApi", this.gridColumnApi);
+    console.log("Api", this.gridApi);
     var allColumnIds = [];
     this.gridColumnApi.getAllColumns().forEach(function(column) {
       allColumnIds.push(column.colId);
     });
-
-    this.gridColumnApi.autoSizeColumns(true);
+    //this.gridApi.sizeColumnsToFit();
+    this.gridColumnApi.autoSizeColumns([allColumnIds]);
   }
 
   onRowClicked(event: any): void {

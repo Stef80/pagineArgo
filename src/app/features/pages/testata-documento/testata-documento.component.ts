@@ -31,7 +31,7 @@ export class TestataDocumentoComponent implements OnInit {
   ngOnInit() {
     this.tabItems = this.tabItemService.getTabItem();
     this.tabPaneItems = this.tabPaneService.getTabPanes();
-    this.getDoc(32831);
+    this.getDoc(31113);
   }
 
   public getDoc(idDoc: number) {

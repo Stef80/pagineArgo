@@ -1,20 +1,17 @@
-<div class="flex-container" id="quadro">
-  <div style="display: flex; flex-direction: row">
-    <div style=" overflow: hidden; flex-grow: 1">
-      <ag-grid-angular
-        #agGrid
-        class="myHead ag-theme-balham"
-        domLayout="autoHeight"
-        [rowData]="rowData"
-        [rowSelection]="rowSelection"
-        [modules]="modules"
-        [columnDefs]="columnDefs"
-        [pagination]="true"
-        [paginationPageSize]="paginationPageSize"
-        (gridReady)="onGridReady($event)"
-        (cellClicked)="onRowClicked($event)"
-      >
-      </ag-grid-angular>
-    </div>
-  </div>
+<div class="content" id="quadro">
+  <ag-grid-angular
+    #agGrid
+    class="myHead ag-theme-balham"
+    style="width: 100%; height: 100%;"
+    domLayout="autoHeight"
+    [rowData]="rowData"
+    [rowSelection]="rowSelection"
+    [modules]="modules"
+    [columnDefs]="columnDefs"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    (gridReady)="onGridReady($event)"
+    (cellClicked)="onRowClicked($event)"
+  >
+  </ag-grid-angular>
 </div>

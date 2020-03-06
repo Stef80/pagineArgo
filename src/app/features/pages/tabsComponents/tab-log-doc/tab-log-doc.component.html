@@ -1,30 +1,43 @@
 <div class="form">
-  <form>
-    <h3>&nbsp;&nbsp;&nbsp;Ricerca Log Documento</h3>
+  <form method="GET" #f="ngForm" (submit)="cerca(f)">
+    <h5>&nbsp;&nbsp;&nbsp;Ricerca Log Documento</h5>
     <div class="form1">
       <div class="title">
-        <label for="Codice Punto"
+        <label for="codice_punto"
           >Punto
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </label>
-        <input class="document document3" type="text" name="Punto" id="Punto" />
-        <label for="Tipo"
+        <input
+          class="document document3"
+          type="text"
+          name="codice_punto"
+          id="codice_punto"
+          ngModel
+        />
+        <label for="tipo"
           >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           Tipo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </label>
-        <input class="document document3" type="text" name="Tipo" id="Tipo" />
+        <input
+          class="document document3"
+          type="text"
+          name="tipo"
+          id="tipo"
+          ngModel
+        />
       </div>
       <br />
 
-      <label for="Segnalazione">
+      <label for="segnalazione">
         Segnalazione
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </label>
       <input
         class="document document5"
         type="text"
-        name="Segnalazione"
-        id="Segnalazione"
+        name="segnalazione"
+        id="segnalazione"
+        ngModel
       />
 
       <br />
@@ -38,14 +51,15 @@
         type="text"
         name="Testo messaggio"
         id="Testo messaggio"
+        ngModel
       />
+    </div>
+    <div class="footer">
+      <button type="submit" id="pulsante">Cerca</button>
+      <button type="button" id="pulsante">Ripulisci</button>
     </div>
   </form>
 </div>
-<div class="footer">
-  <button type="button" id="pulsante">Cerca</button> &nbsp;&nbsp;&nbsp;
-  <button type="button" id="pulsante">Ripulisci</button>
-</div>
 <div>
-  <app-chiamata [path]="this.path" [paginationPageSize]="4"></app-chiamata>
+  <app-chiamata [path]="this.path" [paginationPageSize]="5"></app-chiamata>
 </div>

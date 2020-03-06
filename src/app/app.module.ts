@@ -38,7 +38,6 @@ import { TabDocPanesService } from "./features/services/tab-doc-panes.service";
 import { TabCompetenzeFattureComponent } from "./features/pages/tabsComponents/tab-consumo/tab-competenze-fatture/tab-competenze-fatture.component";
 import { TabLettureComponent } from "./features/pages/tabsComponents/tab-consumo/tab-letture/tab-letture.component";
 import { TabMisureComponent } from "./features/pages/tabsComponents/tab-consumo/tab-misure/tab-misure.component";
-import { Riepilogo } from "./features/models/riepilogo_doc";
 
 @NgModule({
   declarations: [

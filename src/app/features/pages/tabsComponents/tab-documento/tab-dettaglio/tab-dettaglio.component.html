@@ -10,14 +10,13 @@
           class="document1"
           type="text"
           name="codice_punto"
-          id="codice
-        Punto"
+          id="codice_punto"
           ngModel
         />
         <label for="mese" id="mese-label">
           Mese
         </label>
-        <input class="document" type="text" name="mese" id="mese" ngModel />
+        <input class="document" type="date" name="mese" id="mese" ngModel />
       </div>
       <label for="Testo">Testo</label>
       <input type="text" name="testo" id="testo" ngModel />
@@ -74,6 +73,7 @@
   </form>
 </div>
 <app-chiamata
+  *ngIf="conferma_chiamata"
   [path]="this.path"
   [lente]="lente"
   [paginationPageSize]="10"

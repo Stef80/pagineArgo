@@ -1,6 +1,6 @@
+<app-menu class="tabmenu"></app-menu>
+<app-side-bar class="tabbar"></app-side-bar>
 <div class="tabcontainer">
-  <app-menu class="tabmenu"></app-menu>
-  <app-side-bar class="tabbar"></app-side-bar>
   <div class="page-container">
     <div class="page-form">
       <div class="square">
@@ -270,15 +270,14 @@
           <button type="button" id="pulsante">Salva</button>
           <button type="button" id="pulsante">Torna</button>
         </div>
-
-        <div>
-          <app-tab
-            class="tab"
-            [tabPaneItems]="tabPaneItems"
-            [tabItems]="tabItems"
-          ></app-tab>
-        </div>
       </div>
+    </div>
+    <div>
+      <app-tab
+        class="tab"
+        [tabPaneItems]="tabPaneItems"
+        [tabItems]="tabItems"
+      ></app-tab>
     </div>
   </div>
 </div>

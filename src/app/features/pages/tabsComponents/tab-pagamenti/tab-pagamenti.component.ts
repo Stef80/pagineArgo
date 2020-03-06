@@ -20,6 +20,7 @@ export class TabPagamentiComponent implements OnInit {
     N_Postale: "",
     n_Mav: ""
   };
+  conferma_chiamata: boolean = false;
   path1 = [];
   totPagamento: string;
   totRate: string;
@@ -40,9 +41,11 @@ export class TabPagamentiComponent implements OnInit {
         this.totPagamento = risp[0].totDocumento;
         this.totRate = risp[0].totRate;
         this.path1.push(this.path);
-        let keys = Object.keys(this.path);
-        console.log("variabile path", this.path);
-        console.log("chiavi in pagamento", keys);
+        console.log("risp", risp);
+        console.log("variabile path", this.totPagamento);
+        console.log("chiavi in pagamento", risp[0].totDocumento);
+
+        this.conferma_chiamata = true;
       });
   }
 }

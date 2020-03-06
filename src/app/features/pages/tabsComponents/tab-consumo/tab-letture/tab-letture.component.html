@@ -1,16 +1,17 @@
 <div class="form">
-  <form>
+  <form method="GET" #f="ngForm" (submit)="cerca(f)">
     <h5>Ricerca Letture</h5>
     <div class="form1">
       <div class="title">
-        <label for="Codice Punto">
+        <label for="codice_punto">
           Codice Punto
         </label>
         <input
           class="document document3"
           type="text"
-          name="Codice Punto"
-          id="Codice Punto"
+          name="codice_punto"
+          id="codice_punto"
+          ngModel
         />
 
         <label for="DataLettura" id="data-lettura-label">
@@ -18,36 +19,50 @@
         >
         <input
           class="document document1"
-          type="text"
-          name="DataLettura"
-          id="DataLettura"
+          type="date"
+          name="dataLettura"
+          id="dataLettura"
+          ngModel
         />
 
-        <label for="al" id="al-label">
+        <label for="dataLettura_al" id="al-label">
           al
         </label>
-        <input class="document document1" type="text" name="al" id="al" />
+        <input
+          class="document document1"
+          type="date"
+          name="dataLettura_al"
+          id="dataLettura_al"
+          ngModel
+        />
       </div>
       <br />
 
       <div class="title">
-        <label for="Periodo dal">
+        <label for="periodo_dal">
           Periodo dal
         </label>
         <input
           class="document document1"
-          type="text"
-          name="Periodo dal"
-          id="Periodo dal"
+          type="date"
+          name="periodo_dal"
+          id="periodo_dal"
+          ngModel
         />
 
-        <label for="al" id="al-label">
+        <label for="periodo_al" id="al-label">
           al
         </label>
-        <input class="document document1" type="text" name="al" id="al" />
+        <input
+          class="document document1"
+          type="date"
+          name="periodo_al"
+          id="periodo_al"
+          ngModel
+        />
       </div>
       <div class="footer">
-        <button type="button" id="pulsante">Cerca</button>
+        <button type="submit" id="pulsante">Cerca</button>
         <button type="button" id="pulsante">Ripulisci</button>
       </div>
     </div>
@@ -55,6 +70,7 @@
 </div>
 
 <app-chiamata
+  *ngIf="conferma_chiamata"
   [path]="this.path"
   [lente]="false"
   [paginationPageSize]="10"

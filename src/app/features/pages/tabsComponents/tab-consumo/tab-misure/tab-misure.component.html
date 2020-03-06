@@ -1,5 +1,5 @@
 <div class="form">
-  <form>
+  <form method="GET" #f="ngForm" (submit)="cerca(f)">
     <h5>Ricerca Misure</h5>
     <div class="form1">
       <div>
@@ -26,7 +26,7 @@
         </label>
         <input
           class="document document1"
-          type="text"
+          type="date"
           name="Periodo dal"
           id="Periodo dal"
         />
@@ -34,10 +34,10 @@
         <label for="al">
           al
         </label>
-        <input class="document document1" type="text" name="al" id="al" />
+        <input class="document document1" type="date" name="al" id="al" />
       </div>
       <div class="footer">
-        <button type="button" id="pulsante">Cerca</button>
+        <button type="submit" id="pulsante">Cerca</button>
         <button type="button" id="pulsante">Ripulisci</button>
       </div>
     </div>
@@ -45,6 +45,7 @@
 </div>
 
 <app-chiamata
+  *ngIf="conferma_chiamata"
   [path]="this.path"
   [lente]="this.lente"
   [paginationPageSize]="10"
